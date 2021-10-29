@@ -1,0 +1,104 @@
+/* WILDCARD SELECTOR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DECLARE VARIABLES */
+:root {
+    --border: 1px solid black;
+}
+
+/* ELEMENT SELECTORS */
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background: black;
+}
+
+h1, label {
+    color: white;
+}
+
+h1 {
+    font-size: 160%;
+}
+
+label {
+    margin: 1rem 0 0.6rem 0;
+}
+
+input {
+    margin: 2px 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 1rem;
+}
+
+button {
+    margin: 5px 0;
+}
+
+/* CLASS SELECTORS */
+.login-body {
+    height: 50vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-hamburger__bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+/* SIGNUP FORM */
+.log-in-hero,
+.sign-up-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 2rem;
+}
+
+.sign-up-hero {
+    display: flex;
+}
+
+.log-in-hero {
+    display: none;
+}
+
+.sign-up__auth,
+.log-in__auth {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+.sign-up__email,
+.sign-up__password,
+.log-in__email,
+.log-in__password {
+    max-width: 49%;
+}

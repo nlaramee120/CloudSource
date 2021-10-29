@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <header>
+        <h1>APP NAME</h1>
+
+        <!-- FINISH THIS LATER ONCE WE TALK ABOUT NAV -->
+        <div class="login-hamburger">
+            <span class="login-hamburger__bar"></span>
+            <span class="login-hamburger__bar"></span>
+            <span class="login-hamburger__bar"></span>
+        </div>
+    </header>
+    
+    <!-- MAIN BODY SECTION, DYNAMICALLY UPDATE TEXT IF USER IS LOGGED IN/SIGNED UP -->
+    <!-- TODO- REFACTOR TO UPDATE W/ HANDLEBARS?? -->
+    <section class="login-body">
+        <section class="sign-up-hero">
+            <label for="sign-up-fname">SIGN UP</label>
+            <input type="text" class="sign-up__fname" id="sign-up-fname" placeholder="First Name">
+            <input type="text" class="sign-up__lname" id="sign-up-lname" placeholder="Last Name">
+
+            <div class="sign-up__auth">
+                <input type="text" class="sign-up__email" id="sign-up-email" placeholder="Email">
+                <input type="text" class="sign-up__password" id="sign-up-password" placeholder="Password">
+                <!-- <input type="text" class="sign-up__fname" id="sign-up-form" placeholder="Confirm Password"> -->
+            </div>
+            <button class="sign-up__submit" id="sign-up-submit">Create an Account!</button>
+        </section>
+
+        <section class="log-in-hero">
+            <label for="log-in-email">LOG IN</label>
+            <input type="text" class="log-in__email" id="log-in-email" placeholder="Email">
+            <input type="text" class="log-in__password" id="log-in-password" placeholder="Password">
+            <button class="log-in__submit" id="log-in-submit">Log In!</button>
+        </section>
+    </section>
+</body>
+</html>
