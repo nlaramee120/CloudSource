@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS metaverse_db;
+CREATE DATABASE metaverse_db;
