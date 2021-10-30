@@ -119,10 +119,6 @@ a {
     padding: 0 2rem;
 }
 
-.sign-up-hero {
-    display: flex;
-}
-
 .log-in-hero {
     display: none;
 }
