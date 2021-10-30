@@ -138,7 +138,7 @@ a {
 
 .sign-up__email,
 .sign-up__password {
-    max-width: 49%;
+    width: 49%;
 }
 
 .button-pos {
