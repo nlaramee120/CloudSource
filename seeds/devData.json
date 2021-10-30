@@ -1,4 +1,4 @@
-{
+[{
     "first_name": "John",
     "last_name": "Doe",
     "email": "jdough@gmail.com",
@@ -6,4 +6,4 @@
     "skills":"HTML, CSS, Javascript",
     "wage_low": 25,
     "wage_high": 35
-}
+}]
