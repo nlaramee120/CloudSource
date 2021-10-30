@@ -1,0 +1,9 @@
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "jdough@gmail.com",
+    "password": "doughboy123",
+    "skills":"HTML, CSS, Javascript",
+    "wage_low": 25,
+    "wage_high": 35
+}
