@@ -1,8 +1,9 @@
 const sequelize = require('../config/connection');
-const { Developer, Project } = require('../models');
+const { Developer, Employer } = require('../models');
 
 // Require seed.json files here
 const devData = require('./devData.json')
+const employerData = require('./employerData.json')
 
 
 const seedDatabase = async () => {
@@ -12,6 +13,11 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+
+  const employer = await Employer.bulkCreate(employerData, {
+    individualHooks: true,
+    returning: true,
+  })
 
   process.exit(0);
 };
