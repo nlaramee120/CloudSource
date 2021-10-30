@@ -11,18 +11,31 @@
     <header>
         <h1>APP NAME</h1>
 
-        <!-- FINISH THIS LATER ONCE WE TALK ABOUT NAV -->
-        <div class="login-hamburger">
-            <span class="login-hamburger__bar"></span>
-            <span class="login-hamburger__bar"></span>
-            <span class="login-hamburger__bar"></span>
-        </div>
+        <nav class="login-navbar">
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Log Out</a>
+                </li>
+                <!-- <li class="nav-item"></li> -->
+            </ul>
+
+            <!-- FINISH THIS LATER ONCE WE TALK ABOUT NAV -->
+            <div class="login-hamburger">
+                <span class="login-hamburger__bar"></span>
+                <span class="login-hamburger__bar"></span>
+                <span class="login-hamburger__bar"></span>
+            </div>
+        </nav>
     </header>
     
     <!-- MAIN BODY SECTION, DYNAMICALLY UPDATE TEXT IF USER IS LOGGED IN/SIGNED UP -->
     <!-- TODO- REFACTOR TO UPDATE W/ HANDLEBARS?? -->
     <section class="login-body">
-        <section class="sign-up-hero">
+        <form class="sign-up-hero">
             <label for="sign-up-fname">SIGN UP</label>
             <input type="text" class="sign-up__fname" id="sign-up-fname" placeholder="First Name">
             <input type="text" class="sign-up__lname" id="sign-up-lname" placeholder="Last Name">
@@ -36,7 +49,7 @@
             <div class="button-pos">
                 <button class="sign-up__submit" id="sign-up-submit">Create an Account!</button>
             </div>
-        </section>
+        </form>
 
         <section class="log-in-hero">
             <label for="log-in-email">LOG IN</label>
@@ -48,5 +61,10 @@
             </div>
         </section>
     </section>
+
+
+    <script src="../js/scripts.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 </html>
