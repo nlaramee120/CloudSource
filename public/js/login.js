@@ -16,8 +16,6 @@ function validateSignUp() {
         alert("fill out ya damn name");
         return false;
     }
-
-
 }
 
 
