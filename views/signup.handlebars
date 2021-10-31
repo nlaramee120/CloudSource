@@ -1,15 +1,18 @@
-<form class="sign-up-hero">
+<form name="signUp" onsubmit="return validateSignUp()" class="sign-up-hero">
     <label for="sign-up-fname">SIGN UP</label>
-    <input type="text" class="sign-up__fname" id="sign-up-fname" placeholder="First Name">
-    <input type="text" class="sign-up__lname" id="sign-up-lname" placeholder="Last Name">
+    <input type="text" name="fname" class="sign-up__fname" id="sign-up-fname" placeholder="First Name">
+    <input type="text" name="lname" class="sign-up__lname" id="sign-up-lname" placeholder="Last Name">
 
     <div class="sign-up__auth">
-        <input type="text" class="sign-up__email" id="sign-up-email" placeholder="Email">
-        <input type="text" class="sign-up__password" id="sign-up-password" placeholder="Password">
+        <input type="text" name="email" class="sign-up__email" id="sign-up-email" placeholder="Email">
+        <input type="text" name="pwd" class="sign-up__password" id="sign-up-password" placeholder="Password">
         <!-- <input type="text" class="sign-up__fname" id="sign-up-form" placeholder="Confirm Password"> -->
     </div>
 
     <div class="button-pos">
-        <button class="sign-up__submit" id="sign-up-submit">Create an Account!</button>
+        <input type="submit" value="Create an Account!" class="sign-up__submit" id="sign-up-submit"></input>
     </div>
 </form>
+
+<script src="../public/js/inputVal.js"></script>
+<script src="../public/js/login.js"></script>

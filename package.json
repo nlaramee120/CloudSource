@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/seed.js",
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,9 +16,11 @@
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
+    "email-validator": "^2.0.4",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "kickbox": "^2.0.4",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
   },

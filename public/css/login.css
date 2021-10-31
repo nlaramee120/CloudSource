@@ -119,10 +119,6 @@ a {
     padding: 0 2rem;
 }
 
-.log-in-hero {
-    display: none;
-}
-
 .sign-up__auth,
 .log-in__auth {
     display: flex;
