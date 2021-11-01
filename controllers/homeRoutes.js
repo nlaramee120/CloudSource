@@ -1,6 +1,4 @@
 const router = require('express').Router();
-const { doc } = require('prettier');
-const { Developer } = require('../models');
 const withAuth = require('../utils/auth');
 
 
