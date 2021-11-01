@@ -22,7 +22,8 @@
     "express-session": "^1.17.1",
     "kickbox": "^2.0.4",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
