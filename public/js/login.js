@@ -1,18 +1,16 @@
 //INPUT FORM VALIDATION
-let kickbox = require('kickbox').client('live_1419926771df4cd723fb73b3452aa941d39608b6ff55d1a4ae9bb060f071aa90').kickbox();
+let emailValidator = require('email-validator');
 
-//TODO- MODULARIZE LATER. FIGURE OUT WHY JS WONT CONNECT TO HBS.
-function validateSignUp() {
+//TODO- FIX THE FUCKIN EMAIL VAL PACKAGE
+async function validateSignUp(event) {
+    event.preventDefault();
+
     let fname = document.forms["signUp"]["fname"].value;
     let lname = document.forms["signUp"]["lname"].value;
     let email = document.forms["signUp"]["email"].value;
     let pwd = document.forms["signUp"]["pwd"].value;
     
-    kickbox.verify("test@example.com", function (err, res) {
-        console.log(res.body);
-    })
-
-    if (!fname || !lname || !pwd) {
+    if (!fname || !lname || !pwd || !emailValidator.validate(email)) {
         alert("fill out ya damn name");
         return false;
     }
