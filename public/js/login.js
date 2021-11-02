@@ -70,9 +70,9 @@ const signupFormHandler = async (event) => {
 };
 
 document
-    .querySelector('.sign-up-hero')
+    .querySelector('#signup-form')
     .addEventListener('submit', signupFormHandler);
 
 document
-    .querySelector('.log-in-hero')
+    .querySelector('#login-form')
     .addEventListener('submit', loginFormHandler);
