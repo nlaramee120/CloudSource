@@ -1,23 +1,4 @@
 {
-  "name": "proj-2",
-  "version": "1.0.0",
-  "description": "A third-party platform that connects business owners to up and coming tech engineers.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nlaramee120/proj-2.git"
-  },
-  "author": "Elliot, Nick and Eduard",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nlaramee120/proj-2/issues"
-  },
-  "homepage": "https://github.com/nlaramee120/proj-2#readme",
-  "dependencies": {
-    "typed.js": "^2.0.12"
   "name": "crowd-funding",
   "version": "1.0.0",
   "description": "",
@@ -41,8 +22,7 @@
     "express-session": "^1.17.1",
     "kickbox": "^2.0.4",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5",
-    "uniqid": "^5.4.0"
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
