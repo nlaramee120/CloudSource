@@ -37,6 +37,10 @@ html{
     overflow-x: hidden;
 }
 
+.sign-up__textarea {
+    border: 1px solid rgb(83, 82, 82);
+}
+
 .heading{
     text-align: center;
     font-size: 2rem;
