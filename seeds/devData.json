@@ -6,4 +6,40 @@
     "skills":"HTML, CSS, Javascript",
     "wage_low": 25,
     "wage_high": 35
+},
+{
+    "first_name": "Tucker",
+    "last_name": "Bolt",
+    "email": "Tbolt@yahoo.com",
+    "password": "Bolt123",
+    "skills":"HTML, CSS",
+    "wage_low": 20,
+    "wage_high": 30
+},
+{
+    "first_name": "Isaiah",
+    "last_name": "Keller",
+    "email": "Ikeller@gmail.com",
+    "password": "keller123",
+    "skills":"HTML, CSS, Javascript, MySQL, React",
+    "wage_low": 25,
+    "wage_high": 35
+},
+{
+    "first_name": "Anthony",
+    "last_name": "White",
+    "email": "Ant@aol.com",
+    "password": "doughboy123",
+    "skills":"Python, Java, MySQL",
+    "wage_low": 25,
+    "wage_high": 35
+},
+{
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "jdough@gmail.com",
+    "password": "doughboy123",
+    "skills":"HTML, Javascript, Handlebars, Angular",
+    "wage_low": 25,
+    "wage_high": 35
 }]
