@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+</head>
+<body>
+    <!-- navbar sections starts  -->
+    <header class="header">
+      <div class="logo">
+        <img src="../images/logo-bookmark.svg" alt="logo-bookmark" />
+      </div>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#">Hire Talent</a>
+        <a href="#whyus">Why Us</a>
+        <a href="#footer">Contact</a>
+        <a href="#" class="btn">Log In</a>
+      </nav>
+
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </header>
+    
+    <!-- MAIN BODY SECTION, DYNAMICALLY UPDATE TEXT IF USER IS LOGGED IN/SIGNED UP -->
+    <!-- TODO- REFACTOR TO UPDATE W/ HANDLEBARS?? -->
+    <section class="login-body">
+        <section class="sign-up-hero">
+            <label for="sign-up-fname">SIGN UP</label>
+            <input type="text" class="sign-up__fname" id="sign-up-fname" placeholder="First Name">
+            <input type="text" class="sign-up__lname" id="sign-up-lname" placeholder="Last Name">
+
+            <div class="sign-up__auth">
+                <input type="text" class="sign-up__email" id="sign-up-email" placeholder="Email">
+                <input type="text" class="sign-up__password" id="sign-up-password" placeholder="Password">
+                <!-- <input type="text" class="sign-up__fname" id="sign-up-form" placeholder="Confirm Password"> -->
+            </div>
+
+            <div class="button-pos">
+                <button class="sign-up__submit" id="sign-up-submit">Create an Account!</button>
+            </div>
+        </section>
+
+        <section class="log-in-hero">
+            <label for="log-in-email">LOG IN</label>
+            <input type="text" class="log-in__email" id="log-in-email" placeholder="Email">
+            <input type="text" class="log-in__password" id="log-in-password" placeholder="Password">
+
+            <div class="button-pos">
+                <button class="log-in__submit" id="log-in-submit">Log In!</button>
+            </div>
+        </section>
+    </section>
+
+    <!--Footer Section Starts Here-->
+    <section class="footer" id="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#"><i class="fas fa-chevron-right"></i>Home</a>
+          <a href="#whyus"><i class="fas fa-chevron-right"></i>Why Us</a>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#"><i class="fas fa-phone"></i>+123-456-789</a>
+          <a href="#"><i class="fas fa-phone"></i>+111-222-3333</a>
+          <a href="#"><i class="fas fa-envelope"></i>company@example.com</a>
+          <a href="#"><i class="fas fa-envelope"></i>company@example.com</a>
+          <a href="#"
+            ><i class="fas fa-map-marker-alt"></i>Chicago, IL, United States of
+            America</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+          <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+          <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+          <a href="#"><i class="fab fa-linkedin"></i>LinkedIn</a>
+          <a href="#"><i class="fab fa-github"></i>GitHub</a>
+        </div>
+      </div>
+    </section>
+    <script src="../js/login.js"></script>
+</body>
+</html>
