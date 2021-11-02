@@ -86,7 +86,7 @@ html{
 
 
 /* navbar sections starts */
-.header{
+.header {
     padding: 3rem 9%;
     display: flex;
     justify-content: space-between;
@@ -98,16 +98,8 @@ html{
     z-index: 10000;
     background-color: #fff;
     box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
-}
-
-<<<<<<< HEAD
-
-.header .logo{
-    cursor: pointer;
-=======
     margin: 1rem;
     border-bottom: var(--border);
->>>>>>> develop
 }
 
 
@@ -117,8 +109,6 @@ html{
     text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-=======
 li {
     list-style: none;
 }
@@ -131,95 +121,12 @@ a {
 .login-body {
     height: 50vh;
     width: 100vw;
->>>>>>> develop
+}
 
-.header .navbar a:hover{
+.header .navbar a:hover {
     color: var(--Soft-Red);
 }
 
-<<<<<<< HEAD
-
-.header .navbar .btn{
-    padding: .6rem 3rem;
-    background-color: var(--Soft-Red);
-    color: #fff;
-    border-radius: .5rem;
-}
-
-.header .navbar .btn:hover{
-    color: var(--Soft-Red);
-    background-color: transparent;
-    border: 2px solid var(--Soft-Red);
-}
-
-#menu-btn{
-    padding: 1rem 1rem;
-    background-color: #eee;
-    font-size: 3rem;
-    color: var(--Soft-Blue);
-    border-radius: .5rem;
-    cursor: pointer;
-    display: none;
-}
-
-
-
-/* Media Queries */
-
-
-
-
-@media (max-width: 991px){
-    html{
-        font-size: 55%;
-    }
-    .header{
-        padding: 2rem;
-    }
-    
-}
-
-@media (max-width: 768px){
-    #menu-btn{
-        display: initial;
-    }
-
-    .header .navbar{
-        position: absolute;
-        top: 115%;
-        right: 2rem;
-        box-shadow: var(--box-shadow);
-        width: 33rem;
-        border-radius: .5rem;
-        border: 2px solid var(--Soft-Blue);
-        background-color: #fff;
-        transform: scale(0);
-        transform-origin: top right;
-    }
-
-    .header .navbar.active{
-        transform: scale(1);
-    }
-
-    .header .navbar a{
-        margin: 2.5rem;
-        text-align: center;
-        display: block;
-        font-size: 2rem;
-    }
-}
-
-
-@media (max-width: 450px){
-    html{
-        font-size: 50%;
-    }
-}
-/* navbar sections ends */
-
-
-/* home section starts  */
-=======
 .login-hamburger {
     display: none;
 }
@@ -256,7 +163,6 @@ a {
     align-items: center;
     padding: 1rem 1.5rem;
 }
->>>>>>> develop
 
 /* SIGNUP FORM */
 .log-in-hero,
@@ -288,56 +194,6 @@ a {
     justify-content: end;
 }
 
-<<<<<<< HEAD
-/* footer section starts */
-.footer .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    gap:2rem;
-}
-
-.footer .box-container .box h3{
-    font-size: 2.5rem;
-    color:var(--black);
-    padding: 1rem 0;
-}
-
-.footer .box-container .box a{
-    display: block;
-    font-size: 1.5rem;
-    color:var(--light-color);
-    padding: 1rem 0;
-}
-
-.footer .box-container .box a i{
-    padding-right: .5rem;
-    color:var(--green);
-}
-
-.footer .box-container .box a:hover i{
-    padding-right:1rem;
-}
-
-
-.footer .credit{
-    padding: 1rem;
-    padding-top: 2rem;
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 2rem;
-    color: #000;
-    border-top: .1rem solid rgba(0, 0, 0, .1);
-}
-
-
-.footer .credit span{
-    color: var(--Soft-Red);
-    cursor: pointer;
-}
-
-
-/* footer section ends */
-=======
 /* QUERIES */
 @media all and (max-width: 768px) {
     .nav-menu {
@@ -380,4 +236,3 @@ a {
     }
 
 }
->>>>>>> develop
