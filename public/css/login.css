@@ -100,9 +100,14 @@ html{
     box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
 }
 
+<<<<<<< HEAD
 
 .header .logo{
     cursor: pointer;
+=======
+    margin: 1rem;
+    border-bottom: var(--border);
+>>>>>>> develop
 }
 
 
@@ -112,11 +117,27 @@ html{
     text-transform: uppercase;
 }
 
+<<<<<<< HEAD
+=======
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CLASS SELECTORS */
+.login-body {
+    height: 50vh;
+    width: 100vw;
+>>>>>>> develop
 
 .header .navbar a:hover{
     color: var(--Soft-Red);
 }
 
+<<<<<<< HEAD
 
 .header .navbar .btn{
     padding: .6rem 3rem;
@@ -198,6 +219,44 @@ html{
 
 
 /* home section starts  */
+=======
+.login-hamburger {
+    display: none;
+}
+
+.login-hamburger__bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+}
+
+.login-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+>>>>>>> develop
 
 /* SIGNUP FORM */
 .log-in-hero,
@@ -207,14 +266,6 @@ html{
     justify-content: center;
 
     padding: 0 2rem;
-}
-
-.sign-up-hero {
-    display: flex;
-}
-
-.log-in-hero {
-    display: none;
 }
 
 .sign-up__auth,
@@ -228,7 +279,7 @@ html{
 
 .sign-up__email,
 .sign-up__password {
-    max-width: 49%;
+    width: 49%;
 }
 
 .button-pos {
@@ -237,6 +288,7 @@ html{
     justify-content: end;
 }
 
+<<<<<<< HEAD
 /* footer section starts */
 .footer .box-container{
     display: grid;
@@ -285,3 +337,47 @@ html{
 
 
 /* footer section ends */
+=======
+/* QUERIES */
+@media all and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: rgb(30, 28, 39);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    
+    .login-hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .login-hamburger.active .login-hamburger__bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .login-hamburger.active .login-hamburger__bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .login-hamburger.active .login-hamburger__bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+>>>>>>> develop
