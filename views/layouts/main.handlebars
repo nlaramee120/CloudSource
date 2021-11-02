@@ -21,22 +21,24 @@
       </div>
 
       <nav class="navbar">
-        <a href="#home">Home</a>
+        <a href="/">Home</a>
         <a href="#">Hire Talent</a>
         <a href="#whyus">Why Us</a>
         <a href="#footer">Contact</a>
-        <a href="#" class="btn">Log In</a>
+        {{!-- {{#if logged_in}} --}}
+        <a href="/login" class="btn">Log In</a>
+        {{!-- {{else}} --}}
+        {{!-- <a href="/profile" class="btn">Profile</a> --}}
+        {{!-- {{/if}} --}}
       </nav>
 
       <div class="fas fa-bars" id="menu-btn"></div>
     </header>
-    <!-- navbar sections starts  -->
 
     <!--RENDER BODY W/ HANDLEBARS -->
     {{{body}}}
 
     <!-- footer section starts  -->
-
     <section class="footer" id="footer">
       <div class="box-container">
         <div class="box">

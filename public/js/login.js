@@ -1,16 +1,16 @@
-let menu = document.querySelector("#menu-btn")
-let navbar = document.querySelector(".navbar")
+let deskMenu = document.querySelector("#menu-btn")
+let deskNavbar = document.querySelector(".navbar")
 
 
-menu.onclick = () =>{
-    menu.classList.toggle("fa-times")
-    navbar.classList.toggle("active")
+deskMenu.onclick = () =>{
+    deskMenu.classList.toggle("fa-times")
+    deskNavbar.classList.toggle("active")
 }
 
 
 window.onscroll = () =>{
-    menu.classList.remove("fa-times")
-    navbar.classList.remove("active")
+    deskMenu.classList.remove("fa-times")
+    deskNavbar.classList.remove("active")
 }
 //INPUT FORM VALIDATION
 
