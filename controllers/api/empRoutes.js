@@ -23,6 +23,7 @@ router.post('/', async (req, res) => {
       req.session.emp_id = empData.id;
       req.session.logged_in = true;
       res.status(200).json(empData)
+      console.log(empData);
     });
   } catch (err) {
     console.log(err);
@@ -53,10 +54,11 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.emp_id = empData.id;
       req.session.logged_in = true;
-      console.log("logged in // routes");
       res.json({user: empData, message: 'Logged ya in.'});
+      console.log(user);
     });
   } catch (err) {
+    console.log("hello // logging in");
     console.log(err);
     res.status(400).json(err);
   }
