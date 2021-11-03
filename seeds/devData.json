@@ -22,24 +22,24 @@
     "email": "Ikeller@gmail.com",
     "password": "keller123",
     "skills":"HTML, CSS, Javascript, MySQL, React",
-    "wage_low": 25,
-    "wage_high": 35
+    "wage_low": 35,
+    "wage_high": 45
 },
 {
     "first_name": "Anthony",
     "last_name": "White",
     "email": "Ant@aol.com",
-    "password": "doughboy123",
+    "password": "Antman9",
     "skills":"Python, Java, MySQL",
     "wage_low": 25,
     "wage_high": 35
 },
 {
-    "first_name": "John",
-    "last_name": "Doe",
-    "email": "jdough@gmail.com",
-    "password": "doughboy123",
-    "skills":"HTML, Javascript, Handlebars, Angular",
+    "first_name": "James",
+    "last_name": "Collins",
+    "email": "Jcollins@gmail.com",
+    "password": "Collins567",
+    "skills":"HTML, CSS, Javascript",
     "wage_low": 25,
     "wage_high": 35
 }]
