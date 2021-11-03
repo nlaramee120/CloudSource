@@ -46,7 +46,6 @@ const loginFormHandler = async (event) => {
             body: JSON.stringify({email, password}),
             headers: {'Content-Type': 'application/json'},
         });
-        debugger
 
         if (res.ok) {
             //TODO - CHOOSE WHAT PAGE TO REDIRECT TO IF LOGIN RESPONSE OK
