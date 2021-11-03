@@ -14,6 +14,7 @@
     <!-- TODO- REFACTOR TO UPDATE W/ HANDLEBARS?? -->
     <section class="login-body">
         <section class="sign-up-hero">
+        <form id="signup-form">
             <label for="sign-up-fname">SIGN UP</label>
             <input type="text" class="sign-up__fname" id="sign-up-fname" placeholder="First Name">
             <input type="text" class="sign-up__lname" id="sign-up-lname" placeholder="Last Name">
@@ -28,9 +29,11 @@
             <div class="button-pos">
                 <button class="sign-up__submit" id="sign-up-submit">Create an Account!</button>
             </div>
+        </form>
         </section>
 
         <section class="log-in-hero">
+        <form id="login-form">
             <label for="log-in-email">LOG IN</label>
             <input type="text" class="log-in__email" id="log-in-email" placeholder="Email">
             <input type="text" class="log-in__password" id="log-in-password" placeholder="Password">
@@ -38,5 +41,7 @@
             <div class="button-pos">
                 <button class="log-in__submit" id="log-in-submit">Log In!</button>
             </div>
+        </form>
         </section>
     </section>
+    <script src="/js/login.js">

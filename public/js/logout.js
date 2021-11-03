@@ -1,16 +1,23 @@
 const logout  = async () => {
-    const res = await fetch('/api/users/logout', {
-        method: 'POST', 
-        headers: {'Content-Type': 'application/json'},
-    });
+    try {
+        const res = await fetch('/api/employers/logout', {
+            method: 'POST', 
+            headers: {'Content-Type': 'application/json'},
+        });
+        console.log("logout");
+        //IF RESPONSE OK, REDIRECT TO ROOT/HOME DIRECTORY
+        if (res.ok) {
+            document.location.replace('/');
+        } else {
+            alert(res.statusText);
+            // console.log("res.ok !== false")
+            // document.location.replace('/')
+        }
 
-    //IF RESPONSE OK, REDIRECT TO ROOT/HOME DIRECTORY
-    if (res.ok) {
-        document.location.replace('/');
-    } else {
-        alert(res.statusText);
+    } catch (err) {
+        console.log("not logged out");
     }
 };
 
 //TODO - ADD ID TO QUERY SELECTOR WHEN WE ADD LOGOUT BUTTOn
-document.querySelector('#').addEventListener('click', logout);
+document.querySelector('#sign-out-button').addEventListener('click', logout);

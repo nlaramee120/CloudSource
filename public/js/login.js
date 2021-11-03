@@ -39,54 +39,57 @@ const loginFormHandler = async (event) => {
     const email = document.querySelector('#log-in-email').value.trim();
     const password = document.querySelector('#log-in-password').value.trim(); 
 
-    if (email && password) {
+    // if (email && password) {
         //POST REQ TO API ENDPOINT
-        const res = await fetch('/api/users/login', {
+        const res = await fetch('/api/employers/login', {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {'Content-Type': 'application/json'},
         });
+        debugger
 
         if (res.ok) {
             //TODO - CHOOSE WHAT PAGE TO REDIRECT TO IF LOGIN RESPONSE OK
-            document.location.replace('/');
+            // document.location.replace('/');
+            console.log("response ok", res.ok)
         } else {
             alert(res.statusText);
         }
-    }
+    // }
 };
 
 //SIGNUP HANDLER
-const signupFormHandler = async (event) => {
-    //PREVENT DEFAULT ACTIOn
-    event.preventDefault();
+// const signupFormHandler = async (event) => {
+//     //PREVENT DEFAULT ACTIOn
+//     event.preventDefault();
+    
+//     //COLLECT VALS FROM SIGNUP FORM
+//     const first_name = document.querySelector('#sign-up-fname').value.trim();
+//     const last_name = document.querySelector('#sign-up-lname').value.trim();
+//     const email = document.querySelector('#sign-up-email').value.trim();
+//     const password = document.querySelector('#sign-up-password').value.trim();
+//     // const com = document.querySelector('#sign-up-company').value.trim();
+//     console.log(first_name, last_name, email, password);
+//     //TODO - CHOOSE WHERE TO REDIRECT IF SIGN UP RES OK
+//     if (first_name && last_name && email && password) {
+//         const res = await fetch('/api/employers', {
+//             method: 'POST',
+//             body: JSON.stringify({first_name, last_name, email, password}),
+//             headers: {'Content-Type': 'application/json'},
+//         });
+//         // debugger
 
-    //COLLECT VALS FROM SIGNUP FORM
-    const fname = document.querySelector('#sign-up-fname').value.trim();
-    const lname = document.querySelector('#sign-up-lname').value.trim();
-    const email = document.querySelector('#sign-up-email').value.trim();
-    const pwd = document.querySelector('#sign-up-password').value.trim();
-    const com = document.querySelector('#sign-up-company').value.trim();
+//         if (res.ok) {
+//             document.location.replace('/');
+//         } else {
+//             alert(res.statusText);
+//         }
+//     }
+// };
 
-    //TODO - CHOOSE WHERE TO REDIRECT IF SIGN UP RES OK
-    if (fname && lname && email && pwd && com) {
-        const res = await fetch('/api/???', {
-            method: 'POST',
-            body: JSON.stringify({fname, lname, email, pwd, com}),
-            headers: {'Content-Type': 'application/json'},
-        });
-
-        if (res.ok) {
-            document.location.replace('/');
-        } else {
-            alert(res.statusText);
-        }
-    }
-};
-
-document
-    .querySelector('#signup-form')
-    .addEventListener('submit', signupFormHandler);
+// document
+//     .querySelector('#signup-form')
+//     .addEventListener('submit', signupFormHandler);
 
 document
     .querySelector('#login-form')

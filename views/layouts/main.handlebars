@@ -25,11 +25,11 @@
         <a href="#">Hire Talent</a>
         <a href="#whyus">Why Us</a>
         <a href="#footer">Contact</a>
-        {{!-- {{#if logged_in}} --}}
+        {{#if logged_in}}
+        <a class="btn" id="sign-out-button">Sign Out</a>
+        {{else}}
         <a href="/login" class="btn">Log In</a>
-        {{!-- {{else}} --}}
-        {{!-- <a href="/profile" class="btn">Profile</a> --}}
-        {{!-- {{/if}} --}}
+        {{/if}}
       </nav>
 
       <div class="fas fa-bars" id="menu-btn"></div>
@@ -73,6 +73,8 @@
     <!-- footer section -->
 
     <script src="../js/main.js"></script>
-    <script src="../js/login.js"></script>
+    {{#if logged_in}}
+    <script src="../js/logout.js"></script>
+    {{/if}}
   </body>
 </html>
