@@ -5,11 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "begin": "node server.js",
+    "start": "node server.js",
     "seed": "node seeds/seed.js",
-    "server": "nodemon server.js",
-    "start": "serve -s build",
-    "heroku-postbuild": "npm run build"
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -24,8 +22,7 @@
     "express-session": "^1.17.1",
     "kickbox": "^2.0.4",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5",
-    "serve": "^12.0.1"
+    "sequelize": "^6.3.5"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
