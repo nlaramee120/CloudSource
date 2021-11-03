@@ -1,5 +1,5 @@
-const Developer = require('./Developer')
-const Employer = require('./Employer')
+const Developer = require('./developer')
+const Employer = require('./employer')
 
 
 
