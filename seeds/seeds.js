@@ -9,12 +9,12 @@ const employerData = require('./employerData.json')
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const developer = await Developer.bulkCreate(devData, {
+  const Developer = await Developer.bulkCreate(devData, {
     individualHooks: true,
     returning: true,
   });
 
-  const employer = await Employer.bulkCreate(employerData, {
+  const Employer = await Employer.bulkCreate(employerData, {
     individualHooks: true,
     returning: true,
   })
