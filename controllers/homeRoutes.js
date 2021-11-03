@@ -34,4 +34,13 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 })
 
+//TODO -- ADD WITHAUTH WHEN LOGIN WORKS
+router.get('/build', async (req, res) => {
+    try {
+        res.render('build')
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
 module.exports = router;
