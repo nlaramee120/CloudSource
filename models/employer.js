@@ -58,7 +58,7 @@ Employer.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'location'
+    modelName: 'employer'
   }
 );
 

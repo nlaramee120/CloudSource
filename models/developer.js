@@ -1,5 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
+
 
 // create our Location model
 class Developer extends Model {
@@ -66,7 +68,7 @@ Developer.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'location'
+    modelName: 'developer'
   }
 );
 
