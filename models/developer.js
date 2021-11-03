@@ -2,7 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our Location model
-class Developer extends Model {}
+class Developer extends Model {
+    checkPassword(loginPw) {
+        return bcrypt.compareSync(loginPw, this.password);
+    }
+}
 
 // create fields/columns for Location model
 Developer.init(
@@ -37,17 +41,27 @@ Developer.init(
     skills: {
         type: DataTypes.STRING
     },
-    wage_low: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    wage_high: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
+    // wage_low: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    // },
+    // wage_high: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false
+    // },
     
   },
   {
+    hooks: {
+        beforeCreate: async (newUserData) => {
+          newUserData.password = await bcrypt.hash(newUserData.password, 10);
+          return newUserData;
+        },
+        beforeUpdate: async (updatedUserData) => {
+          updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+          return updatedUserData;
+        },
+      },
     sequelize,
     timestamps: false,
     freezeTableName: true,
