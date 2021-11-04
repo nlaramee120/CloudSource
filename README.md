@@ -104,9 +104,9 @@ Eduard Voicu
 - [LinkedIn](https://www.linkedin.com/in/eduardvoicu/)
 
 Nick
-- [GitHub]()
-- [LinkedIn]()
+- [GitHub](https://github.com/nlaramee120)
+- [LinkedIn](https://www.linkedin.com/in/nick-laramee-90386520b/)
 
 Elliot
-- [GitHub]()
-- [LinkedIn]()
+- [GitHub](https://github.com/elliottdombrowski)
+- [LinkedIn](https://www.linkedin.com/in/elliott-dombrowski-8b2ba8211/)
