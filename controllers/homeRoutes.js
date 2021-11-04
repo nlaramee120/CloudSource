@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
+const myusername = 'user1';
+const mypassword = 'mypassword';
+var session;
 
 router.get('/', async (req, res) => {
     try {
@@ -42,5 +45,6 @@ router.get('/build', async (req, res) => {
         res.status(500).json(err)
     }
 })
+
 
 module.exports = router;

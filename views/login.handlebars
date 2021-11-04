@@ -11,7 +11,6 @@
 <script src="../public/js/login.js"></script> --}}
 
     <!-- MAIN BODY SECTION, DYNAMICALLY UPDATE TEXT IF USER IS LOGGED IN/SIGNED UP -->
-    <!-- TODO- REFACTOR TO UPDATE W/ HANDLEBARS?? -->
     <section class="login-body">
         <section class="sign-up-hero">
         <form id="signup-form">
@@ -23,6 +22,7 @@
             <div class="sign-up__auth">
                 <input type="text" class="sign-up__email" id="sign-up-email" placeholder="Email">
                 <input type="text" class="sign-up__password" id="sign-up-password" placeholder="Password">
+                {{!-- <i class="fas fa-eye" id="pwd-toggle"></i> --}}
                 <!-- <input type="text" class="sign-up__fname" id="sign-up-form" placeholder="Confirm Password"> -->
             </div>
 
@@ -33,13 +33,14 @@
         </section>
 
         <section class="log-in-hero">
-        <form id="login-form">
+        <form action="/build" method="post" id="login-form">
             <label for="log-in-email">LOG IN</label>
             <input type="text" class="log-in__email" id="log-in-email" placeholder="Email">
             <input type="text" class="log-in__password" id="log-in-password" placeholder="Password">
+            {{!-- <i class="fas fa-eye" id="pwd-toggle"></i> --}}
 
             <div class="button-pos">
-                <button class="log-in__submit" id="log-in-submit">Log In!</button>
+                <button type="submit" class="log-in__submit" id="log-in-submit">Log In!</button>
             </div>
         </form>
         </section>

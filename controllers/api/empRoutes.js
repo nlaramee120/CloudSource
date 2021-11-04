@@ -51,13 +51,12 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    req.session.save(() => {
-      console.log("yo yo yo yo yo")
+    // req.session.save(() => {
       req.session.emp_id = empData.id;
       req.session.logged_in = true;
       res.json({user: empData, message: 'Logged ya in.'});
       console.log(user);
-    });
+    // });
   } catch (err) {
     console.log("hello // logging in");
     console.log(err);
@@ -65,17 +64,17 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/logout', (req, res) => {
-  console.log("logged in???");
-  if (req.session.logged_in) {
-    console.log("logged in");
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    console.log("hello");
-    res.status(404).end();
-  }
+router.get('/logout', (req, res) => {
+  req.session.destroy();
+  res.redirect('/');
+  // if (req.session.logged_in) {
+  //   req.session.destroy(() => {
+  //     res.status(204).end();
+  //   });
+  // } else {
+  //   console.log("hello");
+  //   res.status(404).end();
+  // }
 });
 
 module.exports = router;
