@@ -206,14 +206,16 @@
     </div>
   </section>
   <section class="grid">
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
+    {{#if developers.length}}
+    <div>
+      <h3>Your Developers</h3>
+
+      {{#each developers as |developer|}}
+      <div>PROFILE PIC HERE???</div>
+      <h4>{{DEV FIRST NAME}} {{DEV LAST NAME}}</h4>
+      <p>{{DEV EMAIL}}</p>
+      <p>{{DEV SKILL 1}}, {{DEV SKILL 2}}, {{DEV SKILL 3}}</p>
+    </div>
   </section>
 </section>
     <!--Footer Section Starts Here-->
