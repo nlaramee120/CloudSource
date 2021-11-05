@@ -22,7 +22,11 @@
 
       <nav class="navbar">
         <a href="/">Home</a>
-        <a href="#">Hire Talent</a>
+        {{#if logged_in}}
+        <a href="/build">Hire Talent</a>
+        {{else}}
+        <a href="/login">Hire Talent</a>
+        {{/if}}
         <a href="#whyus">Why Us</a>
         <a href="#footer">Contact</a>
         {{#if logged_in}}

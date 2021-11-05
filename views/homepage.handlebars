@@ -9,7 +9,11 @@
           software engineers, cloud architects, data engineers and more.
         </p>
 
-        <a href="#" class="home-btn">Let's Scale Your Tech</a>
+        {{#if logged_in}}
+        <a href="/build" class="home-btn">Let's Scale Your Tech</a>
+        {{else}}
+        <a href="/login" class="home-btn">Let's Scale Your Tech</a>
+        {{/if}}
       </div>
 
       <div class="image">

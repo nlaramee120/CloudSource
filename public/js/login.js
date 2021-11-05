@@ -1,17 +1,16 @@
-let deskMenu = document.querySelector("#menu-btn")
-let deskNavbar = document.querySelector(".navbar")
-
+let deskMenu = document.querySelector("#menu-btn");
+let deskNavbar = document.querySelector(".navbar");
 
 deskMenu.onclick = () =>{
     deskMenu.classList.toggle("fa-times")
     deskNavbar.classList.toggle("active")
-}
-
+};
 
 window.onscroll = () =>{
     deskMenu.classList.remove("fa-times")
     deskNavbar.classList.remove("active")
-}
+};
+
 //INPUT FORM VALIDATION
 
 //TODO- FIX THE FUCKIN EMAIL VAL PACKAGE
@@ -29,9 +28,8 @@ window.onscroll = () =>{
 //     }
 // }
 
-
 //LOGIN HANDLER
-const loginFormHandler = async (event) => {
+const loginFormHandler = async (event, req, res) => {
     //PREVENT INPUTS FROM CLEARING ON SUBMIT/DEFAULT ACTION
     event.preventDefault();
 
@@ -39,8 +37,9 @@ const loginFormHandler = async (event) => {
     const email = document.querySelector('#log-in-email').value.trim();
     const password = document.querySelector('#log-in-password').value.trim(); 
 
-    // if (email && password) {
+    if (email && password) {
         //POST REQ TO API ENDPOINT
+        console.log(email)
         const res = await fetch('/api/employers/login', {
             method: 'POST',
             body: JSON.stringify({email, password}),
@@ -49,13 +48,18 @@ const loginFormHandler = async (event) => {
 
         if (res.ok) {
             //TODO - CHOOSE WHAT PAGE TO REDIRECT TO IF LOGIN RESPONSE OK
-            // document.location.replace('/');
+            console.log(res);
+            document.location.replace('/build');
             console.log("response ok", res.ok)
+            return;
         } else {
+            console.log("failed");
             alert(res.statusText);
         }
-    // }
+    }
 };
+
+
 
 //SIGNUP HANDLER
 // const signupFormHandler = async (event) => {
