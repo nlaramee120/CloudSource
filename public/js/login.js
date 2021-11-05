@@ -20,6 +20,15 @@ const loginFormHandler = async (event, req, res) => {
     const email = document.querySelector('#log-in-email').value.trim();
     const password = document.querySelector('#log-in-password').value.trim(); 
 
+    //VALIDATE LOGIN INPUTS
+    if (!email || !password) {
+        alert('Please enter all forms.');
+        return;
+    } else if (!email.includes('@') && ".com") {
+        alert('Please enter a valid email.');
+        return;
+    }
+
     if (email && password) {
         //POST REQ TO API ENDPOINT
         const res = await fetch('/api/employers/login', {
@@ -33,6 +42,7 @@ const loginFormHandler = async (event, req, res) => {
             return;
         } else {
             alert("Incorrect Email or Password.");
+            return;
         }
     }
 };
@@ -60,8 +70,12 @@ const signupFormHandler = async (event) => {
 
         if (res.ok) {
             document.location.replace('/build');
+        } else if (!email.includes('@') && ".com") {
+            alert('Please enter a valid email.');
+            return;
         } else {
             alert("Failed to create account. Please enter all forms.");
+            return;
         }
     }
 };
