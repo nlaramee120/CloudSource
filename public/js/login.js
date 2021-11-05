@@ -48,14 +48,17 @@ const loginFormHandler = async (event, req, res) => {
 
         if (res.ok) {
             //TODO - CHOOSE WHAT PAGE TO REDIRECT TO IF LOGIN RESPONSE OK
+            console.log(res);
             document.location.replace('/build');
             console.log("response ok", res.ok)
+            return;
         } else {
             console.log("failed");
             alert(res.statusText);
         }
     }
 };
+
 
 
 //SIGNUP HANDLER

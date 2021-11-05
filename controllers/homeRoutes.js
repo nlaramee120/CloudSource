@@ -1,13 +1,14 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
-const myusername = 'user1';
-const mypassword = 'mypassword';
-var session;
-
 router.get('/', async (req, res) => {
     try {
-        res.render('homepage')
+        let logged_in = false;
+        if (req.session && req.session.logged_in) {
+            logged_in = true;
+        }
+        
+        res.render('homepage', {logged_in: logged_in})
     } catch (err) {
         res.status(500).json(err);
     }
@@ -15,7 +16,12 @@ router.get('/', async (req, res) => {
 
 router.get('/login', async (req, res) => {
     try {
-        res.render('login')
+        let logged_in = false;
+        if (req.session && req.session.logged_in) {
+            logged_in = true;
+        }
+
+        res.render('login', {logged_in: logged_in})
     } catch (err) {
         res.status(500).json(err);
     }
@@ -23,7 +29,12 @@ router.get('/login', async (req, res) => {
 
 router.get('/signup', async (req, res) => {
     try {
-        res.render('signup')
+        let logged_in = false;
+        if (req.session && req.session.logged_in) {
+            logged_in = true;
+        }
+
+        res.render('signup', {logged_in: logged_in})
     } catch (err) {
         res.status(500).json(err);
     }
@@ -31,7 +42,12 @@ router.get('/signup', async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
     try {
-        res.render('profile')
+        let logged_in = false;
+        if (req.session && req.session.logged_in) {
+            logged_in = true;
+        }
+
+        res.render('profile', {logged_in: logged_in})
     } catch (err) {
         res.status(500).json(err);
     }
@@ -40,7 +56,12 @@ router.get('/profile', withAuth, async (req, res) => {
 //TODO -- ADD WITHAUTH WHEN LOGIN WORKS
 router.get('/build', async (req, res) => {
     try {
-        res.render('build')
+        let logged_in = false;
+        if (req.session && req.session.logged_in) {
+            logged_in = true;
+        }
+
+        res.render('build', {logged_in: logged_in})
     } catch (err) {
         res.status(500).json(err)
     }
