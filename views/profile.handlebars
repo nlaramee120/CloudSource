@@ -195,18 +195,16 @@
         </svg>
       </button>
     </form>
-    <div class="admin-profile">
-      <span class="greeting">Hello admin</span>
-      <div class="notifications">
-        <span class="badge">1</span>
-        <svg>
-          <use xlink:href="#users"></use>
-        </svg>
-      </div>
-    </div>
   </section>
   <section class="grid">
-    <article></article>
+    <article>
+          <div id="checkbox-template" style="display:none">
+    <div style="display:inline-block">
+      <input type="checkbox" id="checkbox_{{id}}" />
+      <label for="checkbox_{{id}}">{{label}}</label>
+    </div>
+  </div>
+    </article>
     <article></article>
     <article></article>
     <article></article>
