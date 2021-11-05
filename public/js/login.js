@@ -39,7 +39,6 @@ const loginFormHandler = async (event, req, res) => {
 
     if (email && password) {
         //POST REQ TO API ENDPOINT
-        console.log(email)
         const res = await fetch('/api/employers/login', {
             method: 'POST',
             body: JSON.stringify({email, password}),
@@ -48,51 +47,46 @@ const loginFormHandler = async (event, req, res) => {
 
         if (res.ok) {
             //TODO - CHOOSE WHAT PAGE TO REDIRECT TO IF LOGIN RESPONSE OK
-            console.log(res);
             document.location.replace('/build');
-            console.log("response ok", res.ok)
             return;
         } else {
-            console.log("failed");
-            alert(res.statusText);
+            alert("Incorrect Email or Password.");
         }
     }
 };
 
 
 
-//SIGNUP HANDLER
-// const signupFormHandler = async (event) => {
-//     //PREVENT DEFAULT ACTIOn
-//     event.preventDefault();
+// SIGNUP HANDLER
+const signupFormHandler = async (event) => {
+    //PREVENT DEFAULT ACTIOn
+    event.preventDefault();
     
-//     //COLLECT VALS FROM SIGNUP FORM
-//     const first_name = document.querySelector('#sign-up-fname').value.trim();
-//     const last_name = document.querySelector('#sign-up-lname').value.trim();
-//     const email = document.querySelector('#sign-up-email').value.trim();
-//     const password = document.querySelector('#sign-up-password').value.trim();
-//     // const com = document.querySelector('#sign-up-company').value.trim();
-//     console.log(first_name, last_name, email, password);
-//     //TODO - CHOOSE WHERE TO REDIRECT IF SIGN UP RES OK
-//     if (first_name && last_name && email && password) {
-//         const res = await fetch('/api/employers', {
-//             method: 'POST',
-//             body: JSON.stringify({first_name, last_name, email, password}),
-//             headers: {'Content-Type': 'application/json'},
-//         });
-//         // debugger
+    //COLLECT VALS FROM SIGNUP FORM
+    const first_name = document.querySelector('#sign-up-fname').value.trim();
+    const last_name = document.querySelector('#sign-up-lname').value.trim();
+    const company = document.querySelector('#sign-up-company').value.trim();
+    const email = document.querySelector('#sign-up-email').value.trim();
+    const password = document.querySelector('#sign-up-password').value.trim();
 
-//         if (res.ok) {
-//             document.location.replace('/');
-//         } else {
-//             alert(res.statusText);
-//         }
-//     }
-// };
+    if (first_name && last_name && company && email && password) {
+        const res = await fetch('/api/employers', {
+            method: 'POST',
+            body: JSON.stringify({first_name, last_name, company, email, password}),
+            headers: {'Content-Type': 'application/json'},
+        });
 
-// document
-//     .querySelector('#signup-form')
-//     .addEventListener('submit', signupFormHandler);
+        if (res.ok) {
+            document.location.replace('/build');
+        } else {
+            alert("Failed to create account. Please enter all forms.");
+        }
+    }
+};
+
+document
+    .querySelector('#signup-form')
+    .addEventListener('submit', signupFormHandler);
 
 document
     .querySelector('#login-form')
