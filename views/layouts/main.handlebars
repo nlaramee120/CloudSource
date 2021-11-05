@@ -21,7 +21,6 @@
       </div>
 
       <nav class="navbar">
-        <a href="/">Home</a>
         {{#if logged_in}}
         <a href="/build">Hire Talent</a>
         {{else}}
@@ -29,6 +28,7 @@
         {{/if}}
         <a href="#whyus">Why Us</a>
         <a href="#footer">Contact</a>
+        <a href="/api/developers/">Profile</a>
         {{#if logged_in}}
         <a class="btn" id="sign-out-button">Sign Out</a>
         {{else}}
