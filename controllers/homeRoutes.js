@@ -54,7 +54,7 @@ router.get('/profile', withAuth, async (req, res) => {
 })
 
 //TODO -- ADD WITHAUTH WHEN LOGIN WORKS
-router.get('/build', async (req, res) => {
+router.get('/build', withAuth, async (req, res) => {
     try {
         let logged_in = false;
         if (req.session && req.session.logged_in) {

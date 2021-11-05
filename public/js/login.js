@@ -11,23 +11,6 @@ window.onscroll = () =>{
     deskNavbar.classList.remove("active")
 };
 
-//INPUT FORM VALIDATION
-
-//TODO- FIX THE FUCKIN EMAIL VAL PACKAGE
-// async function validateSignUp(event) {
-//     event.preventDefault();
-
-//     let fname = document.forms["signUp"]["fname"].value;
-//     let lname = document.forms["signUp"]["lname"].value;
-//     let email = document.forms["signUp"]["email"].value;
-//     let pwd = document.forms["signUp"]["pwd"].value;
-    
-//     if (!fname || !lname || !pwd || !emailValidator.validate(email)) {
-//         alert("fill out ya damn name");
-//         return false;
-//     }
-// }
-
 //LOGIN HANDLER
 const loginFormHandler = async (event, req, res) => {
     //PREVENT INPUTS FROM CLEARING ON SUBMIT/DEFAULT ACTION
@@ -46,8 +29,7 @@ const loginFormHandler = async (event, req, res) => {
         });
 
         if (res.ok) {
-            //TODO - CHOOSE WHAT PAGE TO REDIRECT TO IF LOGIN RESPONSE OK
-            document.location.replace('/build');
+            document.location.replace('/');
             return;
         } else {
             alert("Incorrect Email or Password.");

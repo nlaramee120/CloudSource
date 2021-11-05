@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Developer } = require('../../models');
 const { Sequelize } = require('sequelize');
 
+
+//NEW TECH BAYBEEEE
 const Op = Sequelize.Op
 
 router.get('/', async (req, res) => {
