@@ -47,6 +47,7 @@ const handleReq = (event, input) => {
     const sql = document.getElementById('sql').value.trim();
     const php = document.getElementById('php').value.trim();
     const cpp = document.getElementById('cpp').value.trim();
+    const submitBtn = document.getElementById('btn')
 
     let valid = false;
     let validArr = [];
@@ -131,6 +132,15 @@ const handleReq = (event, input) => {
     if (valid) {
         console.log("array: " + validArr);
         alert('validated');
+
+        return fetch(`api/developers/filter/${validArr.join("&")}`, {
+            method: "GET"
+        })
+        .then(function (data) {
+            console.log(data.json());
+        })
+
+
     } else {
         alert('pick something');
         return false;
