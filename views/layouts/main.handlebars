@@ -17,7 +17,7 @@
     <!-- navbar sections starts  -->
     <header class="header">
       <div class="logo">
-        <img src="../images/logo-bookmark.svg" alt="logo-bookmark" />
+        <a href="/"><img src="../images/logo-bookmark.svg" alt="logo-bookmark" /></a>
       </div>
 
       <nav class="navbar">
@@ -36,7 +36,7 @@
         {{/if}}
       </nav>
 
-      <div class="fas fa-bars" id="menu-btn"></div>
+      <div class="fas fa-bars nav-menu" id="menu-btn"></div>
     </header>
 
     <!--RENDER BODY W/ HANDLEBARS -->
@@ -77,6 +77,8 @@
     <!-- footer section -->
 
     <script src="../js/main.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/dashboard.js"></script>
     {{#if logged_in}}
     <script src="../js/logout.js"></script>
     {{/if}}
