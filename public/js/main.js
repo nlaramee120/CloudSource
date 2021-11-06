@@ -30,3 +30,17 @@ window.onclick = (event) => {
         navbar.classList.remove('active');
     }
 };
+
+//HANDLE REQ FORM 
+const handleReq = (event) => {
+    event.preventDefault();
+    console.log('testing req');
+}
+
+try {
+    document
+        .querySelector('#request-form')
+        .addEventListener('submit', handleReq);
+} catch (err) {
+    //IF NOT ABLE TO FIND QUERYSELECTOR, DON'T USE IT.
+};
