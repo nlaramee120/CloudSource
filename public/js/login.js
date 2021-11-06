@@ -1,5 +1,3 @@
-
-
 //LOGIN HANDLER
 const loginFormHandler = async (event, req, res) => {
     //PREVENT INPUTS FROM CLEARING ON SUBMIT/DEFAULT ACTION
