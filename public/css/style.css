@@ -18,7 +18,13 @@
     color: rgb(63, 63, 63);
 }
 
-
+/* div.logo {
+    padding: 5px;
+} */
+.logo img {
+   width: 130px;
+   height: 130px;
+}
 ::-webkit-scrollbar{
     width: 12px;
 }
@@ -81,7 +87,7 @@ html{
 :root{
     --Soft-Blue: hsl(231, 69%, 60%);
     --Soft-Red: hsl(0, 94%, 66%);
-    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Grayish-Blue: hsl(0, 0%, 52%);
     --Very-Dark-Blue: hsl(229, 31%, 21%);
     --box-shadow: .5rem .5rem  0 hsl(231, 69%, 60%);
     --text-shadow: .4rem .4rem  0 rgba(0, 0, 0, .2);
@@ -104,9 +110,13 @@ html{
     box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
 }
 
+header.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .header .logo{
-    cursor: pointer;
+    cursor: grab;
 }
 
 
@@ -204,7 +214,7 @@ html{
 /* home section starts  */
 
 .home{
-    padding-top: 15rem;
+    /* padding-top: 15rem; */
     display: flex;
     align-items: center;
     flex-wrap: wrap;
