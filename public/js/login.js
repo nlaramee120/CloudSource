@@ -1,15 +1,4 @@
-let deskMenu = document.querySelector("#menu-btn");
-let deskNavbar = document.querySelector(".navbar");
 
-deskMenu.onclick = () =>{
-    deskMenu.classList.toggle("fa-times")
-    deskNavbar.classList.toggle("active")
-};
-
-window.onscroll = () =>{
-    deskMenu.classList.remove("fa-times")
-    deskNavbar.classList.remove("active")
-};
 
 //LOGIN HANDLER
 const loginFormHandler = async (event, req, res) => {
