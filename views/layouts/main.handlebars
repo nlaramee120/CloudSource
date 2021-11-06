@@ -21,7 +21,6 @@
       </div>
 
       <nav class="navbar">
-        <a href="/">Home</a>
         {{#if logged_in}}
         <a href="/build">Hire Talent</a>
         {{else}}
@@ -29,6 +28,7 @@
         {{/if}}
         <a href="views/homepage.handlebars">Why Us</a>
         <a href="#footer">Contact</a>
+        <a href="/api/developers/">Profile</a>
         {{#if logged_in}}
         <a class="btn" id="sign-out-button">Sign Out</a>
         {{else}}
@@ -36,7 +36,7 @@
         {{/if}}
       </nav>
 
-      <div class="fas fa-bars" id="menu-btn"></div>
+      <div class="fas fa-bars nav-menu" id="menu-btn"></div>
     </header>
 
     <!--RENDER BODY W/ HANDLEBARS -->
@@ -77,6 +77,8 @@
     <!-- footer section -->
 
     <script src="../js/main.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="../js/dashboard.js"></script>
     {{#if logged_in}}
     <script src="../js/logout.js"></script>
     {{/if}}
