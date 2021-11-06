@@ -55,84 +55,84 @@ const handleReq = (event, input) => {
         valid = true;
         validArr.push(html);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('css').checked) {
         valid = true;
         validArr.push(css);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('js').checked) {
         valid = true;
         validArr.push(js);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('ts').checked) {
         valid = true;
         validArr.push(ts);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('react').checked) {
         valid = true;
         validArr.push(react);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('python').checked) {
         valid = true;
         validArr.push(python);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('java').checked) {
         valid = true;
         validArr.push(java);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('node').checked) {
         valid = true;
         validArr.push(node);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('sql').checked) {
         valid = true;
         validArr.push(sql);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('php').checked) {
         valid = true;
         validArr.push(php);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
     
     if (document.getElementById('cpp').checked) {
         valid = true;
         validArr.push(cpp);
     } else {
-        console.log('check something');
+        //DO NOTHING
     }
 
     if (valid) {
         console.log("array: " + validArr);
         alert('validated');
     } else {
-        alert('pick');
+        alert('pick something');
         return false;
     }
 }
