@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
 
 *{
-    font-family: 'Poppins', sans-serif;
+   resize: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
+    /* outline: none; */
     border: none;
     text-transform: capitalize;
     transition: 0.2s ease-in-out;
@@ -118,10 +118,10 @@ a {
 }
 
 /* CLASS SELECTORS */
-.login-body {
+/* .login-body {
     height: 50vh;
     width: 100vw;
-}
+} */
 
 .header .navbar a:hover {
     color: var(--Soft-Red);
@@ -138,7 +138,7 @@ a {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background: white;
+    background: red;
 }
 
 .nav-menu {
@@ -167,25 +167,27 @@ a {
 /* SIGNUP FORM */
 .log-in-hero,
 .sign-up-hero {
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     justify-content: center;
-
-    padding: 0 2rem;
+    border: none;
+    padding: 2rem;
+    font-size: large;
 }
-
+#signup-form {
+    flex-wrap: nowrap;
+}
 .sign-up__auth,
 .log-in__auth {
     display: flex;
     justify-content: space-between;
-
     max-width: 100%;
     margin-top: 1rem;
 }
 
 .sign-up__email,
 .sign-up__password {
-    width: 49%;
+    width: 100%;
 }
 
 .button-pos {
@@ -194,6 +196,10 @@ a {
     justify-content: end;
 }
 
+section-login.body {
+    font-size: 20px;
+    padding: 10px;
+}
 /* QUERIES */
 @media all and (max-width: 768px) {
     .nav-menu {
