@@ -2,7 +2,6 @@ const hamburger = document.querySelector('.login-hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLink = document.querySelectorAll('.nav-link');
 
-console.log("for the love of fuck");
 // hamburger.addEventListener('click', mobileMenu);
 navLink.forEach(n => n.addEventListener('click', closeMenu));
 function mobileMenu() {
