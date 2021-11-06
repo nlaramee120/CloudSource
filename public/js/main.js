@@ -32,45 +32,109 @@ window.onclick = (event) => {
 };
 
 //HANDLE REQ FORM 
-const handleReq = (event) => {
+const handleReq = (event, input) => {
     //prevent default action
     event.preventDefault();
+    
+    const html = document.getElementById('html').value.trim();
+    const css = document.getElementById('css').value.trim();
+    const js = document.getElementById('js').value.trim();
+    const ts = document.getElementById('ts').value.trim();
+    const react = document.getElementById('react').value.trim();
+    const python = document.getElementById('python').value.trim();
+    const java = document.getElementById('java').value.trim();
+    const node = document.getElementById('node').value.trim();
+    const sql = document.getElementById('sql').value.trim();
+    const php = document.getElementById('php').value.trim();
+    const cpp = document.getElementById('cpp').value.trim();
 
     let valid = false;
+    let validArr = [];
 
     if (document.getElementById('html').checked) {
         valid = true;
-    } else if (document.getElementById('css').checked) {
+        validArr.push(html);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('css').checked) {
         valid = true;
-    } else if (document.getElementById('js').checked) {
+        validArr.push(css);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('js').checked) {
         valid = true;
-    } else if (document.getElementById('ts').checked) {
+        validArr.push(js);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('ts').checked) {
         valid = true;
-    } else if (document.getElementById('react').checked) {
+        validArr.push(ts);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('react').checked) {
         valid = true;
-    } else if (document.getElementById('python').checked) {
+        validArr.push(react);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('python').checked) {
         valid = true;
-    } else if (document.getElementById('java').checked) {
+        validArr.push(python);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('java').checked) {
         valid = true;
-    } else if (document.getElementById('node').checked) {
+        validArr.push(java);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('node').checked) {
         valid = true;
-    } else if (document.getElementById('sql').checked) {
+        validArr.push(node);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('sql').checked) {
         valid = true;
-    } else if (document.getElementById('php').checked) {
+        validArr.push(sql);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('php').checked) {
         valid = true;
-    } else if (document.getElementById('cpp').checked) {
+        validArr.push(php);
+    } else {
+        console.log('check something');
+    }
+    
+    if (document.getElementById('cpp').checked) {
         valid = true;
+        validArr.push(cpp);
     } else {
         console.log('check something');
     }
 
     if (valid) {
+        console.log("array: " + validArr);
         alert('validated');
     } else {
         alert('pick');
         return false;
     }
-
 }
 
 try {
