@@ -1,7 +1,8 @@
-let menu = document.querySelector("#menu-btn");
-let navbar = document.querySelector(".navbar");
-let deskMenu = document.querySelector("#menu-btn");
-let deskNavbar = document.querySelector(".navbar");
+const menu = document.querySelector("#menu-btn");
+const navbar = document.querySelector(".navbar");
+const deskMenu = document.querySelector("#menu-btn");
+const deskNavbar = document.querySelector(".navbar");
+const submitBtn = document.getElementById('btn');
 
 deskMenu.onclick = () =>{
     deskMenu.classList.toggle("fa-times")
@@ -19,18 +20,19 @@ menu.onclick = () => {
     navbar.classList.toggle("active");
 };
 
+//CLOSE MOBILE NAV ON PAGE SCROLL
 window.onscroll = () => {
     menu.classList.remove("fa-times");
     navbar.classList.remove("active");
 };
 
+//CLOSE MOBILE NAV IF USER CLICKS ANYWHERE OUTSIDE OF NAV
 window.onclick = (event) => {
     if (event.target !== menu && event.target !== navbar) {
         menu.classList.remove('active');
         navbar.classList.remove('active');
     }
 };
-
 //HANDLE REQ FORM 
 const handleReq = (event, input) => {
     //prevent default action

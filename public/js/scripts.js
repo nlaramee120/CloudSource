@@ -13,8 +13,3 @@ function closeMenu() {
     // hamburger.classList.remove('active');
     navMenu.classList.remove('active');
 }
-
-// window.onclick = () => {
-//     console.log('please god');
-//     closeMenu();
-// }
