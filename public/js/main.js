@@ -55,78 +55,56 @@ const handleReq = (event, input) => {
     if (document.getElementById('html').checked) {
         valid = true;
         validArr.push(html);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('css').checked) {
         valid = true;
         validArr.push(css);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('js').checked) {
         valid = true;
         validArr.push(js);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('ts').checked) {
         valid = true;
         validArr.push(ts);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('react').checked) {
         valid = true;
         validArr.push(react);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('python').checked) {
         valid = true;
         validArr.push(python);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('java').checked) {
         valid = true;
         validArr.push(java);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('node').checked) {
         valid = true;
         validArr.push(node);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('sql').checked) {
         valid = true;
         validArr.push(sql);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('php').checked) {
         valid = true;
         validArr.push(php);
-    } else {
-        //DO NOTHING
     }
     
     if (document.getElementById('cpp').checked) {
         valid = true;
         validArr.push(cpp);
-    } else {
-        //DO NOTHING
     }
 
     if (valid) {
@@ -139,7 +117,6 @@ const handleReq = (event, input) => {
         .then(function (data) {
             console.log(data.json());
         })
-
 
     } else {
         alert('pick something');
