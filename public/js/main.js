@@ -136,8 +136,22 @@ const handleReq = (event, input) => {
         return fetch(`api/developers/filter/${validArr.join("&")}`, {
             method: "GET"
         })
+        .then(function (response) {
+            return response.json();
+          })
         .then(function (data) {
-            console.log(data.json());
+            console.log(data);
+
+            var newCard = $("<div>").attr("class", "card");
+
+            $(".filteredEmps").append(newCard)
+
+            for (i = 0; i < data.length; i++) {
+                var newCardBody = $("<div>").attr("class", "card-body");
+                $(".card").append(newCardBody)
+                
+                let name
+            }
         })
 
 
