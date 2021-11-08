@@ -142,6 +142,8 @@ const handleReq = (event, input) => {
         .then(function (data) {
             console.log(data);
 
+            $(".card").empty();
+
             var newCard = $("<div>").attr("class", "card");
 
             $(".filteredEmps").append(newCard)
@@ -150,7 +152,12 @@ const handleReq = (event, input) => {
                 var newCardBody = $("<div>").attr("class", "card-body");
                 $(".card").append(newCardBody)
                 
-                let name
+                let name = data[i].first_name + " " + data[i].last_name;
+                console.log(name)
+                newCardBody.append("<h3 class='card-title'>" + name + "<h3>")
+
+                let email = data[i].email;
+                newCardBody.append("<p class='card-text'>" + email + "<p>");
             }
         })
 
