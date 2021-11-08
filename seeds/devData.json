@@ -57,7 +57,7 @@
     "last_name": "Capadocia",
     "email": "bighatguy@gmail.com",
     "password": "jamie123",
-    "skills":"HTML, CSS, Javascript,NodeJS, MySql,",
+    "skills":"HTML, CSS, Javascript, NodeJS, MySql,",
     "wage_low": 25,
     "wage_high": 30
 }]
