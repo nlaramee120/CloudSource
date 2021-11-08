@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cloudsource</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/build.css" />
 
     <link
       <!-- rel="stylesheet" -->
@@ -17,7 +18,7 @@
     <!-- navbar sections starts  -->
     <header class="header">
       <div class="logo">
-        <img src="../images/CloudSource.svg" alt="logo-bookmark" />
+        {{!-- <a href="/"><img src="../images/logo-bookmark.svg" alt="logo-bookmark" /></a> --}}
       </div>
 
       <nav class="navbar">
@@ -26,7 +27,7 @@
         {{else}}
         <a href="/login">Hire Talent</a>
         {{/if}}
-        <a href="views/homepage.handlebars">Why Us</a>
+        <a href="#whyus">Why Us</a>
         <a href="#footer">Contact</a>
         <a href="/api/developers/">Profile</a>
         {{#if logged_in}}
@@ -80,9 +81,8 @@
     <script src="../js/main.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/dashboard.js"></script>
-    <script src="../js/buildreq.js"></script>
     {{#if logged_in}}
-      <script src="../js/logout.js"></script>
+    <script src="../js/logout.js"></script>
     {{/if}}
   </body>
 </html>
