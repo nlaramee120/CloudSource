@@ -40,7 +40,8 @@ router.get('/signup', async (req, res) => {
     }
 })
 
-router.get('/profile', withAuth, async (req, res) => {
+//REMEMBER TO ADD WITHAUTH BACK
+router.get('/profile', async (req, res) => {
     try {
         let logged_in = false;
         if (req.session && req.session.logged_in) {
