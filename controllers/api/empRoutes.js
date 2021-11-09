@@ -56,13 +56,13 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.get('/user', async (req, res) => {
-  try {
-    res.json({user: JSON.parse(req.session.emp_data), logged_in: true});
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+// router.get('/user', withAuth, async (req, res) => {
+//   try {
+//     res.render('profile', {logged_in: logged_in})
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
 
 router.get('/logout', (req, res) => { 
