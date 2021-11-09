@@ -82,6 +82,11 @@ svg {
 body {
   position: relative;
 }
+
+.menu-heading {
+  list-style: none;
+}
+
 .page-header {
     position: fixed;
     top: 0;
@@ -324,6 +329,7 @@ body {
   }
 
   .page-header {
+    margin-top: 5%;
     padding: 10px;
   }
 
@@ -346,9 +352,7 @@ body {
 
   .page-header .admin-menu {
     position: absolute;
-    left: 98px;
     top: 57px;
-    margin-top: 0;
     z-index: 2;
     border-radius: var(--border-radius);
     background: var(--page-header-bgColor);
