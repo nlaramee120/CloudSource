@@ -146,7 +146,7 @@ header.header {
 .header .navbar .btn:hover{
     color: var(--Soft-Red);
     background-color: transparent;
-    border: 2px solid var(--Soft-Red);
+    /* border: 2px solid var(--Soft-Red); */
 }
 
 .append-email:hover {
@@ -239,7 +239,7 @@ label {
 .form-btn:hover {
     color: var(--Soft-Red);
     background-color: transparent;
-    border: 2px solid var(--Soft-Red);
+    /* border: 2px solid var(--Soft-Red); */
 }
 
 .login-body {
