@@ -250,6 +250,16 @@ label {
     margin-bottom: 1.2rem;
 }
 
+.bars {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--Soft-Blue);
+}
+
 
 /* Media Queries */
 
@@ -304,6 +314,18 @@ label {
     
     .sign-up-creds {
         width: 100%;
+    }
+
+    .hamburger.active .bars:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bars:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bars:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 

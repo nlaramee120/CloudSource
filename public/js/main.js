@@ -3,6 +3,7 @@ const navbar = document.querySelector(".navbar");
 const deskMenu = document.querySelector("#menu-btn");
 const deskNavbar = document.querySelector(".navbar");
 const submitBtn = document.getElementById('btn');
+const hamburger = document.querySelector('.hamburger');
 
 deskMenu.onclick = () =>{
     deskMenu.classList.toggle("fa-times")
@@ -32,4 +33,9 @@ window.onclick = (event) => {
         menu.classList.remove('active');
         navbar.classList.remove('active');
     }
+};
+
+hamburger.addEventListener('click', mobileMenu);
+const mobileMenu = () => {
+    hamburger.classList.toggle('active');
 };
