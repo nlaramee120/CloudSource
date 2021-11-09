@@ -86,7 +86,7 @@ const handleReq = (event) => {
                 for (i = 0; i < data.length; i++) {
                     var newCardBody = $("<div>").attr("class", "card-body");
                     $(".card").append(newCardBody)
-                    
+                    console.log("consoling data ", data[i]);
                     let name = data[i].first_name + " " + data[i].last_name;
                     console.log(name)
                     newCardBody.append("<h3 class='card-title'>" + name + "<h3>")
@@ -96,24 +96,28 @@ const handleReq = (event) => {
                     newCardBody.append("<p class='card-text'>" + `<a class="append-email" href="mailto: ${email}">` + email + "</a>" + "<p>");
 
 
-                let skills = data[i].skills;
-                newCardBody.append("<p class='card-text skills-text'>" + skills + "<p>");
+                    let skills = data[i].skills;
+                    newCardBody.append("<p class='card-text skills-text'>" + skills + "<p>");
 
-                newCardBody.append(`<a class='sign-up-input form-btn append-btn generateBtn${i}'>Add to my Profile</a>`)
+                    newCardBody.append(`<a class='sign-up-input form-btn append-btn generateBtn${i}'>Add to my Profile</a>`)
 
+                    let appendClass = document.querySelector('.generateBtn' + i);
+                    console.log(appendClass)
+                    appendClass.dataset.id = data[i].id;
 
-                // let buttonId = ".generatebutton" + i
-                let appendClass = document.querySelector('.generateBtn' + i);
-                console.log(appendClass)
+                    $(appendClass).on("click", function (event) {
+                        fetch("/api/employers/" + event.target.dataset.id, {
+                            method: 'PUT'
+                        }).then(data => {
+                            console.log(data);
+                        }).catch(err => {
+                            console.log(err);
+                        });
+                        var newName = $("<div>").attr("class", "empName");
+                        $(".myProfile").append(newName)
 
-                $(appendClass).on("click", function () {
-                    
-                    console.log(name)
-                    var newName = $("<div>").attr("class", "empName");
-                    $(".myProfile").append(newName)
-
-                    $(".empName").append("<h3 class='card-title'>" + name + "<h3>")
-                })
+                        $(".empName").append("<h3 class='card-title'>" + name + "<h3>")
+                    })
                 }
             }
         })

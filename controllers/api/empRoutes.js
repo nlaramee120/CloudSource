@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Employer } = require('../../models');
+const { Employer, Developer } = require('../../models');
+const { sequelize } = require('../../models/developer');
 
 router.get('/', async (req, res) => {
     
@@ -56,18 +57,17 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// router.get('/user', withAuth, async (req, res) => {
-//   try {
-//     res.render('profile', {logged_in: logged_in})
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
-
+router.put('/:id', (req, res) => {
+  // Employer.update({employees: sequelize.fn('array_append', sequelize.col('employees'), req.params.id)}, {where: {id: req.session.emp_id}}).then(data => {
+  Developer.update({employer_id: req.session.emp_id}, {where: {id: req.params.id}})
+    .then(data => {
+      console.log("emp routes side " + data);
+      res.json(data);
+    })
+  .catch (err => {res.json(err)});
+});
 
 router.get('/logout', (req, res) => { 
-  // req.session.destroy();
-  // res.redirect('/');
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
