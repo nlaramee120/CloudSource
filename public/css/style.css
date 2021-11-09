@@ -139,10 +139,18 @@ header.header {
     border-radius: .5rem;
 }
 
+.append-email {
+    text-decoration: underline;
+}
+
 .header .navbar .btn:hover{
     color: var(--Soft-Red);
     background-color: transparent;
     border: 2px solid var(--Soft-Red);
+}
+
+.append-email:hover {
+    color: var(--Soft-Red);
 }
 
 #menu-btn{
@@ -238,7 +246,9 @@ label {
     padding: 1rem 9% 2rem;
 }
 
-
+.skills-text {
+    margin-bottom: 1.2rem;
+}
 
 
 /* Media Queries */
@@ -421,6 +431,12 @@ label {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .download .box{
