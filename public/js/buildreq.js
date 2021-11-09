@@ -99,15 +99,15 @@ const handleReq = (event) => {
                 let skills = data[i].skills;
                 newCardBody.append("<p class='card-text skills-text'>" + skills + "<p>");
 
-                newCardBody.append("<a class='sign-up-input form-btn append-btn generateBtn${i}'>Add to my Profile</a>")
+                newCardBody.append(`<a class='sign-up-input form-btn append-btn generateBtn${i}'>Add to my Profile</a>`)
 
 
-                let buttonId = ".generatebutton" + i
-                let whatever = document.querySelector(buttonId)
-                console.log(buttonId)
+                // let buttonId = ".generatebutton" + i
+                let appendClass = document.querySelector('.generateBtn' + i);
+                console.log(appendClass)
 
-                $(whatever).on("click", function () {
-                    console.log(data[i].first_name, "soup")
+                $(appendClass).on("click", function () {
+                    console.log(name)
                 })
                 }
             }
