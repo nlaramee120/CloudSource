@@ -35,8 +35,7 @@ router.get('/filter/:skills', async (req, res) => {
         )
       })
       console.log(query)
-      //NOT SURE WHAT RETURN QUERY IS DOING BUT IT DONT WORK MAN
-      return {};
+      return query;
     }
     
     const devData = await Developer.findAll({
