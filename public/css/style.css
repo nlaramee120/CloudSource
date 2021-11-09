@@ -22,8 +22,7 @@
     padding: 5px;
 } */
 .logo img {
-   width: 130px;
-   height: 130px;
+    width: 100%;
 }
 ::-webkit-scrollbar{
     width: 12px;
@@ -116,7 +115,14 @@ header.header {
 }
 
 .header .logo{
+    width: 130px;
+    height: 65px;
     cursor: grab;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -146,7 +152,7 @@ header.header {
 .header .navbar .btn:hover{
     color: var(--Soft-Red);
     background-color: transparent;
-    border: 2px solid var(--Soft-Red);
+    /* border: 2px solid var(--Soft-Red); */
 }
 
 .append-email:hover {
@@ -239,7 +245,7 @@ label {
 .form-btn:hover {
     color: var(--Soft-Red);
     background-color: transparent;
-    border: 2px solid var(--Soft-Red);
+    /* border: 2px solid var(--Soft-Red); */
 }
 
 .login-body {
@@ -248,6 +254,16 @@ label {
 
 .skills-text {
     margin-bottom: 1.2rem;
+}
+
+.bars {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--Soft-Blue);
 }
 
 
@@ -304,6 +320,18 @@ label {
     
     .sign-up-creds {
         width: 100%;
+    }
+
+    .hamburger.active .bars:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bars:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bars:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
