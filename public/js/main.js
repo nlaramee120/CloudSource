@@ -25,3 +25,11 @@ window.onscroll = () => {
     menu.classList.remove("fa-times");
     navbar.classList.remove("active");
 };
+
+//CLOSE MOBILE NAV IF USER CLICKS ANYWHERE OUTSIDE OF NAV
+window.onclick = (event) => {
+    if (event.target !== menu && event.target !== navbar) {
+        menu.classList.remove('active');
+        navbar.classList.remove('active');
+    }
+};
