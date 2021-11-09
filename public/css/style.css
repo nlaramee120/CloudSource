@@ -188,7 +188,8 @@ label {
 }
 
 .sign-up-input {
-    border: 1px solid black;
+    border: 1px solid var(--Soft-Blue);
+    border-radius: 0.5rem;
     padding: 0.5rem;
     margin: 5px 0;
 }
@@ -266,7 +267,29 @@ label {
     background: var(--Soft-Blue);
 }
 
+.myProfile {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--Soft-Blue);
+}
 
+.dev-card {
+    font-size: 140%;
+    padding: 0.5rem;
+}
+
+.dev-card-name {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.dev-card-bottom {
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--Soft-Blue);
+}
+
+#request-description {
+    border-bottom: 2px solid var(--Soft-Blue);
+}
 /* Media Queries */
 
 
