@@ -40,7 +40,6 @@ const loginFormHandler = async (event, req, res) => {
 const signupFormHandler = async (event) => {
     //PREVENT DEFAULT ACTIOn
     event.preventDefault();
-    console.log('signing up');
     
     //COLLECT VALS FROM SIGNUP FORM
     const first_name = document.querySelector('#sign-up-fname').value.trim();
