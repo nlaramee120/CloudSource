@@ -90,7 +90,7 @@
     </header> --}}
 
     <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
-      <svg width="20" height="20" aria-hidden="true">
+      <svg width="20" height="20" aria-hidden="true"> 
         <use xlink:href="#down"></use>
       </svg>
     </button>
@@ -103,7 +103,7 @@
           <svg>
             <use xlink:href="#pages"></use>
           </svg>
-          <span>Pages</span>
+          <span>Projects</span>
         </a>
       </li>
       <li>
@@ -114,40 +114,16 @@
           <span>Developers</span>
         </a>
       </li>
-      <li>
-        <a href="#0">
-          <svg>
-            <use xlink:href="#collection"></use>
-          </svg>
-          <span>Collection</span>
-        </a>
-      </li>
-      <li>
+      {{!-- <li>
         <a href="#0">
           <svg>
             <use xlink:href="#comments"></use>
           </svg>
           <span>Comments</span>
         </a>
-      </li>
-      <li>
-        <a href="#0">
-          <svg>
-            <use xlink:href="#appearance"></use>
-          </svg>
-          <span>Appearance</span>
-        </a>
-      </li>
+      </li> --}}
       <li class="menu-heading">
         <h3>Settings</h3>
-      </li>
-      <li>
-        <a href="#0">
-          <svg>
-            <use xlink:href="#settings"></use>
-          </svg>
-          <span>Settings</span>
-        </a>
       </li>
       <li>
         <a href="#0">
@@ -155,14 +131,6 @@
             <use xlink:href="#options"></use>
           </svg>
           <span>Options</span>
-        </a>
-      </li>
-      <li>
-        <a href="#0">
-          <svg>
-            <use xlink:href="#charts"></use>
-          </svg>
-          <span>Charts</span>
         </a>
       </li>
       <li>
@@ -184,16 +152,6 @@
   </nav>
 </header>
 <section class="page-content">
-  <section class="search-and-user">
-    <form>
-      <input type="search" placeholder="Search Talent...">
-      <button type="submit" aria-label="submit form">
-        <svg aria-hidden="true">
-          <use xlink:href="#search"></use>
-        </svg>
-      </button>
-    </form>
-  </section>
   <section class="grid">
     {{#if developers.length}}
     <div>
