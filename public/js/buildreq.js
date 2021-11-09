@@ -57,6 +57,8 @@ const handleReq = (event) => {
         return;
     }
 
+
+
     //IF ARRAY OF CHECKED INPUTS IS > 0, HIT API AND RETURN DEVELOPERS
     if (checkedArr.length > 0) {
         return fetch(`api/developers/filter/${checkedArr.join("&")}`, {
@@ -68,13 +70,18 @@ const handleReq = (event) => {
         .then(function (data) {
             console.log(data);
 
+            $('.card').remove();
+
             var newCard = $("<div>").attr("class", "card");
+
 
             $(".filteredEmps").append(newCard)
 
             if(data.length <= 0) {
-                alert('No developers found.');
-                return;
+
+                alert("No developers found.");
+                return
+            
             } else {
                 for (i = 0; i < data.length; i++) {
                     var newCardBody = $("<div>").attr("class", "card-body");
@@ -84,13 +91,21 @@ const handleReq = (event) => {
                     console.log(name)
                     newCardBody.append("<h3 class='card-title'>" + name + "<h3>")
 
+
                     let email = data[i].email;
                     newCardBody.append("<p class='card-text'>" + email + "<p>");
 
-                    let skills = data[i].skills;
-                    newCardBody.append("<p class='card-text'>" + skills + "<p>");
+
+                let skills = data[i].skills;
+                newCardBody.append("<p class='card-text'>" + skills + "<p>");
+
+                newCardBody.append("<a class='btn btn-primary btn-dlock mt-4 generateBtn'>Add to my Profile</a>")
+
+                   
                 }
+
             }
+        // }
         })
     } else {
         //OTHERWISE FORCE USER TO SELECT SOMETHING
