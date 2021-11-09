@@ -186,7 +186,7 @@ label {
 .sign-up-form {
     display: flex;
     flex-direction: column;
-    padding: 0 8rem;
+    padding: 0 10rem;
 }
 
 .sign-up__submit {
@@ -232,6 +232,10 @@ label {
     color: var(--Soft-Red);
     background-color: transparent;
     border: 2px solid var(--Soft-Red);
+}
+
+.login-body {
+    padding: 1rem 9% 2rem;
 }
 
 
@@ -298,6 +302,10 @@ label {
     html{
         font-size: 50%;
     }
+
+    .sign-up-form {
+        padding: 0;
+    }
 }
 /* navbar sections ends */
 
@@ -361,13 +369,7 @@ label {
     color: #fff;
 }
 
-.sign-up-form {
-    padding: 0;
-}
-
 /* home section ends */
-
-
 
 /* features section starts  */
 
