@@ -31,7 +31,7 @@
 }
 
 
-ul {
+/* ul {
   list-style: none;
 }
 
@@ -51,30 +51,30 @@ button {
 
 input {
   -webkit-appearance: none;
-}
+} */
 
-/* [type="checkbox"] {
+#mode {
   position: absolute;
   left: -9999px;
-} */
+}
 
 label {
   cursor: pointer;
 }
 
-button,
+/* button,
 input {
   border: none;
   position: relative;
-}
+} */
 
 svg {
   display: block;
 }
 
-body {
+/* body {
   font: 16px/1.5 "Lato", sans-serif;
-}
+} */
 
 
 /* HEADER STYLES
@@ -204,6 +204,9 @@ body {
   fill: var(--blue);
 }
 
+.profile-header {
+  font-size: 150%;
+}
 
 /* PAGE CONTENT STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
