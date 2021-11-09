@@ -107,7 +107,12 @@ const handleReq = (event) => {
                 console.log(appendClass)
 
                 $(appendClass).on("click", function () {
+                    
                     console.log(name)
+                    var newName = $("<div>").attr("class", "empName");
+                    $(".myProfile").append(newName)
+
+                    $(".empName").append("<h3 class='card-title'>" + name + "<h3>")
                 })
                 }
             }
