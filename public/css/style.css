@@ -139,10 +139,18 @@ header.header {
     border-radius: .5rem;
 }
 
+.append-email {
+    text-decoration: underline;
+}
+
 .header .navbar .btn:hover{
     color: var(--Soft-Red);
     background-color: transparent;
     border: 2px solid var(--Soft-Red);
+}
+
+.append-email:hover {
+    color: var(--Soft-Red);
 }
 
 #menu-btn{

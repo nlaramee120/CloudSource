@@ -93,7 +93,7 @@ const handleReq = (event) => {
 
 
                     let email = data[i].email;
-                    newCardBody.append("<p class='card-text'>" + email + "<p>");
+                    newCardBody.append("<p class='card-text'>" + `<a class="append-email" href="mailto: ${email}">` + email + "</a>" + "<p>");
 
 
                 let skills = data[i].skills;
