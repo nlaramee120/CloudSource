@@ -82,12 +82,6 @@
 </svg>
 <header class="page-header">
   <nav>
-  {{!-- <header class="header">
-      <div class="logo">
-        <img src="../images/logo-bookmark.svg" alt="logo-bookmark" />
-      </div>
-      <div class="fas fa-bars" id="menu-btn"></div>
-    </header> --}}
 
     <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
       <svg width="20" height="20" aria-hidden="true"> 
@@ -114,14 +108,6 @@
           <span class="profile-header" id="profile-dev">Developers</span>
         </a>
       </li>
-      {{!-- <li>
-        <a href="#0">
-          <svg>
-            <use xlink:href="#comments"></use>
-          </svg>
-          <span>Comments</span>
-        </a>
-      </li> --}}
       <li class="menu-heading">
         <h3>Settings</h3>
       </li>
@@ -155,6 +141,9 @@
   <section class="grid">
     <div>
       <h2 class="myProfile">Developers Interested In:</h2>
+      {{#each developers}}
+      <h3>{{first_name}} {{last_name}}</h3>
+      {{/each}}
     </div>
   </section>
 </section>

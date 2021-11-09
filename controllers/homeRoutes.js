@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const { Employer, Developer } = require('../models');
 
 router.get('/', async (req, res) => {
     try {
@@ -47,7 +48,9 @@ router.get('/profile', withAuth, async (req, res) => {
             logged_in = true;
         }
 
-        res.render('profile', {logged_in: logged_in})
+        const data = await Developer.findAll({where: {employer_id: req.session.emp_id}});
+        const developers = data.map(item => item.get({plain: true}));
+        res.render('profile', {logged_in, developers})
     } catch (err) {
         res.status(500).json(err);
     }
