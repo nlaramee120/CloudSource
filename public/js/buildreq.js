@@ -72,19 +72,24 @@ const handleReq = (event) => {
 
             $(".filteredEmps").append(newCard)
 
-            for (i = 0; i < data.length; i++) {
-                var newCardBody = $("<div>").attr("class", "card-body");
-                $(".card").append(newCardBody)
-                
-                let name = data[i].first_name + " " + data[i].last_name;
-                console.log(name)
-                newCardBody.append("<h3 class='card-title'>" + name + "<h3>")
+            if(data.length <= 0) {
+                alert('No developers found.');
+                return;
+            } else {
+                for (i = 0; i < data.length; i++) {
+                    var newCardBody = $("<div>").attr("class", "card-body");
+                    $(".card").append(newCardBody)
+                    
+                    let name = data[i].first_name + " " + data[i].last_name;
+                    console.log(name)
+                    newCardBody.append("<h3 class='card-title'>" + name + "<h3>")
 
-                let email = data[i].email;
-                newCardBody.append("<p class='card-text'>" + email + "<p>");
+                    let email = data[i].email;
+                    newCardBody.append("<p class='card-text'>" + email + "<p>");
 
-                let skills = data[i].skills;
-                newCardBody.append("<p class='card-text'>" + skills + "<p>");
+                    let skills = data[i].skills;
+                    newCardBody.append("<p class='card-text'>" + skills + "<p>");
+                }
             }
         })
     } else {
