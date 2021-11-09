@@ -78,26 +78,32 @@ const handleReq = (event) => {
             $(".filteredEmps").append(newCard)
 
             if(data.length <= 0) {
+
                 alert("No developers found.");
                 return
-            }
+            
+            } else {
+                for (i = 0; i < data.length; i++) {
+                    var newCardBody = $("<div>").attr("class", "card-body");
+                    $(".card").append(newCardBody)
+                    
+                    let name = data[i].first_name + " " + data[i].last_name;
+                    console.log(name)
+                    newCardBody.append("<h3 class='card-title'>" + name + "<h3>")
 
-            for (i = 0; i < data.length; i++) {
 
-                var newCardBody = $("<div>").attr("class", "card-body");
-                $(".card").append(newCardBody)
-                
-                let name = data[i].first_name + " " + data[i].last_name;
-                console.log(name)
-                newCardBody.append("<h3 class='card-title'>" + name + "<h3>")
+                    let email = data[i].email;
+                    newCardBody.append("<p class='card-text'>" + email + "<p>");
 
-                let email = data[i].email;
-                newCardBody.append("<p class='card-text'>" + email + "<p>");
 
                 let skills = data[i].skills;
                 newCardBody.append("<p class='card-text'>" + skills + "<p>");
 
                 newCardBody.append("<a class='btn btn-primary btn-dlock mt-4 generateBtn'>Add to my Profile</a>")
+
+                   
+                }
+
             }
         // }
         })
