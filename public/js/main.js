@@ -3,16 +3,17 @@ const navbar = document.querySelector(".navbar");
 const deskMenu = document.querySelector("#menu-btn");
 const deskNavbar = document.querySelector(".navbar");
 const submitBtn = document.getElementById('btn');
-const hamburger = document.querySelector('.hamburger');
+const burger = document.querySelector('.hamburger');
+const bar = document.querySelectorAll('.bars');
 
 deskMenu.onclick = () =>{
-    deskMenu.classList.toggle("fa-times")
-    deskNavbar.classList.toggle("active")
+    deskMenu.classList.toggle("fa-times");
+    deskNavbar.classList.toggle("active");
 };
 
 window.onscroll = () =>{
-    deskMenu.classList.remove("fa-times")
-    deskNavbar.classList.remove("active")
+    deskMenu.classList.remove("fa-times");
+    deskNavbar.classList.remove("active");
 };
 
 //HANDLERS FOR OPENING/CLOSING MOBILE HAMBURGER MENUS
@@ -33,9 +34,4 @@ window.onclick = (event) => {
         menu.classList.remove('active');
         navbar.classList.remove('active');
     }
-};
-
-hamburger.addEventListener('click', mobileMenu);
-const mobileMenu = () => {
-    hamburger.classList.toggle('active');
 };
