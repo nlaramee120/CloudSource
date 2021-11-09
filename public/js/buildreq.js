@@ -68,8 +68,6 @@ const handleReq = (event) => {
             return response.json();
           })
         .then(function (data) {
-            console.log(data);
-
             $('.card').remove();
 
             var newCard = $("<div>").attr("class", "card");
@@ -86,9 +84,7 @@ const handleReq = (event) => {
                 for (i = 0; i < data.length; i++) {
                     var newCardBody = $("<div>").attr("class", "card-body");
                     $(".card").append(newCardBody)
-                    console.log("consoling data ", data[i]);
                     let name = data[i].first_name + " " + data[i].last_name;
-                    console.log(name)
                     newCardBody.append("<h3 class='card-title'>" + name + "<h3>")
 
 
@@ -102,7 +98,6 @@ const handleReq = (event) => {
                     newCardBody.append(`<a class='sign-up-input form-btn append-btn generateBtn${i}'>Add to my Profile</a>`)
 
                     let appendClass = document.querySelector('.generateBtn' + i);
-                    console.log(appendClass)
                     appendClass.dataset.id = data[i].id;
 
                     $(appendClass).on("click", function (event) {

@@ -73,7 +73,6 @@ router.get('/logout', (req, res) => {
       res.status(204).end();
     });
   } else {
-    console.log("hello");
     res.status(404).end();
   }
 });
