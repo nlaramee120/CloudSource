@@ -99,13 +99,17 @@ const handleReq = (event) => {
                 let skills = data[i].skills;
                 newCardBody.append("<p class='card-text'>" + skills + "<p>");
 
-                newCardBody.append("<a class='btn btn-primary btn-dlock mt-4 generateBtn'>Add to my Profile</a>")
+                newCardBody.append(`<a class='btn btn-primary btn-dlock mt-4 generateBtn${i}'>Add to my Profile</a>`)
 
-                   
+                let buttonId = ".generatebutton" + i
+                let whatever = document.querySelector(buttonId)
+                console.log(buttonId)
+
+                $(whatever).on("click", function () {
+                    console.log(data[i].first_name, "soup")
+                })
                 }
-
             }
-        // }
         })
     } else {
         //OTHERWISE FORCE USER TO SELECT SOMETHING
