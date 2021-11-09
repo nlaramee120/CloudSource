@@ -144,6 +144,8 @@ const handleReq = (event, input) => {
         .then(function (data) {
             console.log(data);
 
+            $(".card").empty();
+
             var newCard = $("<div>").attr("class", "card");
 
             $(".filteredEmps").append(newCard)
