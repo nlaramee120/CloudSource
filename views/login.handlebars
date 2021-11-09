@@ -3,36 +3,37 @@
     <!-- MAIN BODY SECTION, DYNAMICALLY UPDATE TEXT IF USER IS LOGGED IN/SIGNED UP -->
     <section class="login-body">
         <section class="sign-up-hero">
-        <form id="signup-form">
-            <label for="sign-up-fname">SIGN UP</label>
-            <input type="text" class="sign-up__fname" id="sign-up-fname" placeholder="First Name" autocapitalize="off">
-            <input type="text" class="sign-up__lname" id="sign-up-lname" placeholder="Last Name" autocapitalize="off">
-            <input type="text" name="company" class="sign-up__company" id="sign-up-company" placeholder="Company Name" autocapitalize="off">
+        <form id="signup-form" class="sign-up-form">
+            <!-- <label for="sign-up_fname">First Name</label> -->
+            <input type="text" class="sign-up__fname sign-up-input" id="sign-up-fname" placeholder="First Name" autocapitalize="off">
+            <input type="text" class="sign-up__lname sign-up-input" id="sign-up-lname" placeholder="Last Name" autocapitalize="off">
+            <input type="text" name="company" class="sign-up__company sign-up-input" id="sign-up-company" placeholder="Company Name" autocapitalize="off">
 
             <div class="sign-up__auth">
-                <input type="text" class="sign-up__email" id="sign-up-email" placeholder="Email" autocapitalize="off">
-                <input type="text" class="sign-up__password" id="sign-up-password" placeholder="Password" autocapitalize="off">
+                <input type="text" class="sign-up__email sign-up-input sign-up-creds" id="sign-up-email" placeholder="Email" autocapitalize="off">
+                <input type="text" class="sign-up__password sign-up-input sign-up-creds" id="sign-up-password" placeholder="Password" autocapitalize="off">
                 {{!-- <i class="fas fa-eye" id="pwd-toggle"></i> --}}
 
                 <!-- <input type="text" class="sign-up__fname" id="sign-up-form" placeholder="Confirm Password"> -->
             </div>
 
             <div class="button-pos">
-                <button class="sign-up__submit" id="sign-up-submit">Create an Account!</button>
+                <button class="sign-up__submit sign-up-input form-btn" id="sign-up-submit">Create an Account!</button>
             </div>
         </form>
         </section>
 
         <section class="log-in-hero">
-        <form action="/build" method="post" id="login-form">
-            <label for="log-in-email">LOG IN</label>
-            <input type="text" class="log-in__email" id="log-in-email" placeholder="Email" autocapitalize="off">
-            <input type="text" class="log-in__password" id="log-in-password" placeholder="Password" autocapitalize="off">
-            {{!-- <i class="fas fa-eye" id="pwd-toggle"></i> --}}
-
+        <form action="/build" method="post" id="login-form" class="sign-up-form">
+            <!-- <label for="log-in-email">LOG IN</label> -->
+            <div class="sign-up__auth">
+                <input type="text" class="log-in__email sign-up-input sign-up-creds" id="log-in-email" placeholder="Email" autocapitalize="off">
+                <input type="text" class="log-in__password  sign-up-input sign-up-creds" id="log-in-password" placeholder="Password" autocapitalize="off">
+                {{!-- <i class="fas fa-eye" id="pwd-toggle"></i> --}}
+            </div>
 
             <div class="button-pos">
-                <button type="submit" class="log-in__submit" id="log-in-submit">Log In!</button>
+                <button type="submit" class="log-in__submit sign-up__submit sign-up-input form-btn" id="log-in-submit">Log In!</button>
             </div>
         </form>
         </section>

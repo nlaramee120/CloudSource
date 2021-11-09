@@ -33,6 +33,7 @@ window.onclick = (event) => {
         navbar.classList.remove('active');
     }
 };
+
 //HANDLE REQ FORM 
 const handleReq = (event, input) => {
     //prevent default action
