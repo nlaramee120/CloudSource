@@ -1,4 +1,5 @@
 //HANDLE REQ FORM 
+console.log('please find this god forsaken file');
 const handleReq = (event) => {
     //PREVENT FORMS FROM CLEARING ON SUBMIT
     event.preventDefault();
