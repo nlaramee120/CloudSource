@@ -423,6 +423,12 @@ label {
     padding-bottom: 5rem;
 }
 
+.box-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .download .box{
     border: 2px solid var(--Soft-Blue);
     box-shadow: var(--box-shadow);
