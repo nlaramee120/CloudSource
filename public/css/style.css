@@ -238,7 +238,9 @@ label {
     padding: 1rem 9% 2rem;
 }
 
-
+.skills-text {
+    margin-bottom: 1.2rem;
+}
 
 
 /* Media Queries */

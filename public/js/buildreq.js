@@ -97,9 +97,9 @@ const handleReq = (event) => {
 
 
                 let skills = data[i].skills;
-                newCardBody.append("<p class='card-text'>" + skills + "<p>");
+                newCardBody.append("<p class='card-text skills-text'>" + skills + "<p>");
 
-                newCardBody.append("<a class='btn btn-primary btn-dlock mt-4 generateBtn'>Add to my Profile</a>")
+                newCardBody.append("<a class='sign-up-input form-btn append-btn'>Add to my Profile</a>")
 
                    
                 }
