@@ -43,13 +43,13 @@ THEN the database from CloudSource spits out the information that matches the de
 
 ## Application Preview
 Full Preview (Mobile Version)
-![Preview](public/images/homepage.png)
+![Preview](public/images/homepagemobile.png)
 
 Sign-Up/Log-In
-![Preview Sign-Up](public/images/signup.png)
+![Preview Sign-Up](public/images/loginmobile.png)
 
 Project Profile
-![Preview Project Profile](public/images/projectprofile.png)
+![Preview Project Profile](public/images/profilemobile.png)
 
 ## Technology
 
