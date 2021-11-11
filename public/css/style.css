@@ -7,7 +7,6 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: 0.2s ease-in-out;
     color: #000;
     text-decoration: none;
