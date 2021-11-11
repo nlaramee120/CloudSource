@@ -12,7 +12,8 @@ const PORT = process.env.PORT || 3001;
 
 const hbs = exphbs.create();
 
-const oneHr = 1000 * 60 * 1;
+//MATH WAS WRONG HERE. COOKIES EXPIRE AFTER 1HR NOW INSTEAD OF 1 MIN
+const oneHr = 1000 * 60 * 60 * 1;
 const sess = {
     secret: 'Super secret secret',
     cookie: { maxAge: oneHr },
