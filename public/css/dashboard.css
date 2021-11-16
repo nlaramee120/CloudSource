@@ -31,7 +31,7 @@
 }
 
 
-ul {
+/* ul {
   list-style: none;
 }
 
@@ -51,9 +51,9 @@ button {
 
 input {
   -webkit-appearance: none;
-}
+} */
 
-[type="checkbox"] {
+#mode {
   position: absolute;
   left: -9999px;
 }
@@ -62,19 +62,19 @@ label {
   cursor: pointer;
 }
 
-button,
+/* button,
 input {
   border: none;
   position: relative;
-}
+} */
 
 svg {
   display: block;
 }
 
-body {
+/* body {
   font: 16px/1.5 "Lato", sans-serif;
-}
+} */
 
 
 /* HEADER STYLES
@@ -82,6 +82,11 @@ body {
 body {
   position: relative;
 }
+
+.menu-heading {
+  list-style: none;
+}
+
 .page-header {
     position: fixed;
     top: 0;
@@ -109,6 +114,7 @@ body {
   right: 0;
   bottom: 0;
   overflow: auto;
+  padding-top: 10%;
 }
 
 .page-header nav {
@@ -204,6 +210,9 @@ body {
   fill: var(--blue);
 }
 
+.profile-header {
+  font-size: 150%;
+}
 
 /* PAGE CONTENT STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -212,7 +221,6 @@ body {
   left: var(--page-header-width);
   width: calc(100% - var(--page-header-width));
   min-height: 100vh;
-  padding: 30px;
   color: var(--page-content-txtColor);
   background: var(--page-content-bgColor);
 }
@@ -321,6 +329,7 @@ body {
   }
 
   .page-header {
+    margin-top: 5%;
     padding: 10px;
   }
 
@@ -343,9 +352,7 @@ body {
 
   .page-header .admin-menu {
     position: absolute;
-    left: 98px;
     top: 57px;
-    margin-top: 0;
     z-index: 2;
     border-radius: var(--border-radius);
     background: var(--page-header-bgColor);
@@ -570,12 +577,6 @@ body {
 */
 
 /* footer section starts */
-.footer .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    gap:2rem;
-}
-
 .footer .box-container .box h3{
     font-size: 2.5rem;
     color:var(--black);

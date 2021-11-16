@@ -42,4 +42,22 @@
     "skills":"HTML, CSS, Javascript",
     "wage_low": 25,
     "wage_high": 30
+},
+{
+    "first_name": "Chris",
+    "last_name": "Knowseverything",
+    "email": "knowitall@gmail.com",
+    "password": "chris123",
+    "skills":"HTML, CSS, Javascript, TypeScript, React, Python, Java, NodeJS, MySql, PHP, C++",
+    "wage_low": 25,
+    "wage_high": 30
+},
+{
+    "first_name": "Jamie",
+    "last_name": "Capadocia",
+    "email": "bighatguy@gmail.com",
+    "password": "jamie123",
+    "skills":"HTML, CSS, Javascript, NodeJS, MySql,",
+    "wage_low": 25,
+    "wage_high": 30
 }]

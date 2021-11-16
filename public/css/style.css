@@ -7,7 +7,6 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    text-transform: capitalize;
     transition: 0.2s ease-in-out;
     color: #000;
     text-decoration: none;
@@ -22,8 +21,7 @@
     padding: 5px;
 } */
 .logo img {
-   width: 130px;
-   height: 130px;
+    width: 100%;
 }
 ::-webkit-scrollbar{
     width: 12px;
@@ -116,7 +114,14 @@ header.header {
 }
 
 .header .logo{
+    width: 130px;
+    height: 65px;
     cursor: grab;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -139,10 +144,18 @@ header.header {
     border-radius: .5rem;
 }
 
+.append-email {
+    text-decoration: underline;
+}
+
 .header .navbar .btn:hover{
     color: var(--Soft-Red);
     background-color: transparent;
-    border: 2px solid var(--Soft-Red);
+    /* border: 2px solid var(--Soft-Red); */
+}
+
+.append-email:hover {
+    color: var(--Soft-Red);
 }
 
 #menu-btn{
@@ -155,8 +168,127 @@ header.header {
     display: none;
 }
 
+label {
+    font-size: 1.6rem;
+}
 
+.route-header {
+    padding: 0 9%;
+}
 
+.route-header > h1 {
+    font-size: 200%;
+}
+
+.sign-up__auth {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sign-up-input {
+    border: 1px solid var(--Soft-Blue);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 5px 0;
+}
+
+.sign-up-creds {
+    width: 47%;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10rem;
+}
+
+.sign-up__submit {
+    width: 100%;
+    margin: 1.5rem 0 0;
+    padding: 1rem 0;
+}
+
+.build-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 130%;
+}
+
+.input-checkbox {
+    margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.form-btn {
+    background-color: var(--Soft-Red);
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.6rem 3rem;
+    border: none;
+}
+
+.form-btn-wrapper > .form-btn {
+    margin-top: 1.5rem;
+}
+
+.form-btn:hover {
+    color: var(--Soft-Red);
+    background-color: transparent;
+    /* border: 2px solid var(--Soft-Red); */
+}
+
+.login-body {
+    padding: 1rem 9% 2rem;
+}
+
+.skills-text {
+    margin-bottom: 1.2rem;
+}
+
+.bars {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--Soft-Blue);
+}
+
+.myProfile {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--Soft-Blue);
+}
+
+.dev-card {
+    font-size: 140%;
+    padding: 0.5rem;
+}
+
+.dev-card-name {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.dev-card-bottom {
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--Soft-Blue);
+}
+
+#request-description {
+    border-bottom: 2px solid var(--Soft-Blue);
+}
 /* Media Queries */
 
 
@@ -169,7 +301,6 @@ header.header {
     .header{
         padding: 2rem;
     }
-    
 }
 
 @media (max-width: 768px){
@@ -200,12 +331,40 @@ header.header {
         display: block;
         font-size: 2rem;
     }
+
+    .sign-up-form {
+        padding: 0 3rem;
+    }
+
+    .sign-up__auth {
+        flex-direction: column;
+    }
+    
+    .sign-up-creds {
+        width: 100%;
+    }
+
+    .hamburger.active .bars:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bars:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bars:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
 
 @media (max-width: 450px){
     html{
         font-size: 50%;
+    }
+
+    .sign-up-form {
+        padding: 0;
     }
 }
 /* navbar sections ends */
@@ -270,12 +429,7 @@ header.header {
     color: #fff;
 }
 
-
-
-
 /* home section ends */
-
-
 
 /* features section starts  */
 
@@ -329,6 +483,12 @@ header.header {
     padding-bottom: 5rem;
 }
 
+.box-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .download .box{
     border: 2px solid var(--Soft-Blue);
     box-shadow: var(--box-shadow);
@@ -361,11 +521,6 @@ header.header {
 
 
 /* footer section starts */
-.footer .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-    gap:2rem;
-}
 
 .footer .box-container .box h3{
     font-size: 2.5rem;

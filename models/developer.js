@@ -43,15 +43,10 @@ Developer.init(
     skills: {
         type: DataTypes.STRING
     },
-    // wage_low: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false,
-    // },
-    // wage_high: {
-    //     type: DataTypes.INTEGER,
-    //     allowNull: false
-    // },
-    
+    employer_id: {
+      type: DataTypes.INTEGER,
+      references: {model: "employer", key: "id"}
+    },
   },
   {
     hooks: {

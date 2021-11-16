@@ -1,0 +1,19 @@
+.card-body {
+    padding: 50px;
+    margin: 50px;
+}
+
+@media (max-width: 768px){
+    .card-body {
+        padding: 50px 25px;
+        margin: 50px 25px;
+    }
+}
+
+
+@media (max-width: 450px){
+    .card-body {
+        padding: 50px 0;
+        margin: 50px 0;
+    }
+}

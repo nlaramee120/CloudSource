@@ -1,4 +1,4 @@
-# proj-2 
+# CloudSource Talent Network
 
 # Team Generator
 
@@ -27,43 +27,29 @@ I WANT to find tech talent that is reliable and knowledgeable
 SO THAT I can hire for a freelance or short term project.
 ```
 ```md
-GIVEN 
-WHEN 
+GIVEN I go on the CloudSource website, I am able to see the
+information about the company and it's initiative
+WHEN I click on the LOG IN button
+THEN I am taken to a SIGN-UP and LOG-IN page.
+WHEN I fill out the information to SIGN-UP
+THEN I am taken to the profile page where I can have access to make a request for a project.
+WHEN I click the checkboxes for the desired developer that I need
+THEN the database from CloudSource spits out the information that matches the description requested by USER.
 
-THEN  
-WHEN
-
-THEN  
-WHEN
-
-THEN
-WHEN
-
-THEN  
-WHEN
-
-THEN 
-WHEN
-
-THEN  
-WHEN
-
-THEN 
-WHEN 
-THEN 
 ```
 ## Installation
 
 
 
 ## Application Preview
-Full Preview
-![Preview GIF](images/)
+Full Preview (Mobile Version)
+![Preview](public/images/homepagemobile.png)
 
-Tests Preview
-![Preview Test](images/)
+Sign-Up/Log-In
+![Preview Sign-Up](public/images/loginmobile.png)
 
-![Team Profile](images/)
+Project Profile
+![Preview Project Profile](public/images/profilemobile.png)
 
 ## Technology
 

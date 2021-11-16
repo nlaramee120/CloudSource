@@ -1,16 +1,16 @@
 {{!-- HANDLEBARS COMPONENT FOR EMPLOYER REQUESTING BUILD --}}
 
 <section>
-    <header>
+    <header class="route-header">
         <h1>Request A Project!</h1>
     </header>
 
     <section>
-        <form id="request-form">
+        <form id="request-form" class="sign-up-form build-form">
             <label for="request-company-name">Company Name</label>
-            <input type="text" id="request-company-name" placeholder="Your Company Name">
+            <input type="text" class="sign-up-input" id="request-company-name" placeholder="Your Company Name">
             <label for="request-title">Your Project Title</label>
-            <input type="text" id="request-title" placeholder="Project Title">
+            <input type="text" class="sign-up-input" id="request-title" placeholder="Project Title">
             <label for="request-description">Describe Your Project</label>
                 
             <div>
@@ -19,24 +19,53 @@
 
             <label for="tech-stack">Choose Your Tech Stack</label>
 
-            <div>
-                <input type="checkbox" id="html" name="tech-stack" value="HTML">HTML</input>
-                <input type="checkbox" id="css" name="tech-stack" value="CSS">CSS</input>
-                <input type="checkbox" id="js" name="tech-stack" value="JavaScript">JavaScript</input>
-                <input type="checkbox" id="ts" name="tech-stack" value="TypeScript">TypeScript</input>
-                <input type="checkbox" id="react" name="tech-stack" value="React">React</input>
-                <input type="checkbox" id="python" name="tech-stack" value="Python">Python</input>
-                <input type="checkbox" id="java" name="tech-stack" value="Java">Java</input>
-                <input type="checkbox" id="node" name="tech-stack" value="NodeJS">NodeJS</input>
-                <input type="checkbox" id="sql" name="tech-stack" value="MySQL">MySQL</input>
-                <input type="checkbox" id="php" name="tech-stack" value="PHP">PHP</input>
-                <input type="checkbox" id="cpp" name="tech-stack" value="C++">C++</input>
+            <div class="checkbox-wrapper">
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="html" name="tech-stack" value="HTML">HTML</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="css" name="tech-stack" value="CSS">CSS</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="js" name="tech-stack" value="JavaScript">JavaScript</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="ts" name="tech-stack" value="TypeScript">TypeScript</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="react" name="tech-stack" value="React">React</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="python" name="tech-stack" value="Python">Python</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="java" name="tech-stack" value="Java">Java</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="node" name="tech-stack" value="NodeJS">NodeJS</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="sql" name="tech-stack" value="MySQL">MySQL</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="php" name="tech-stack" value="PHP">PHP</input>
+                </div>
+                <div class="checkbox-inner-wrapper">
+                    <input type="checkbox" class="sign-up-input input-checkbox" id="cpp" name="tech-stack" value="C++">C++</input>
+                </div>
             </div>
 
-            <div>
-                <button type="submit" form="request-form" value="Submit" id="btn">Find Talent!</button>
+            <div class="form-btn-wrapper">
+                <button type="submit" class="form-btn" form="request-form" value="Submit" id="btn">Find Talent!</button>
             </div>
         </form>
+
+        </br>
+
+        <div>
+            <h2 class="filteredEmps"></h2>
+        </div>
+
     </section>
 
 </section>

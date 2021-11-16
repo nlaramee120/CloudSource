@@ -26,7 +26,6 @@ router.get('/filter/:skills', async (req, res) => {
     const _test = (includedSkills) => {
 
       let query = []
-      console.log(includedSkills)
       includedSkills.forEach(x => {
       query.push(
           {skills: {
@@ -34,8 +33,7 @@ router.get('/filter/:skills', async (req, res) => {
             }}
         )
       })
-      console.log(query)
-      return query
+      return query;
     }
     
     const devData = await Developer.findAll({
